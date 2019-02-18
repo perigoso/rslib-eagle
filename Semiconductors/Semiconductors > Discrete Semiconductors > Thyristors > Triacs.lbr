@@ -73,10 +73,64 @@
 </layers>
 <library>
 <packages>
+<package name="DPAK">
+<smd name="P$1" x="-2.285" y="-3.65" dx="2.4" dy="1.4" layer="1" rot="R90"/>
+<smd name="P$2" x="2.285" y="-3.65" dx="2.4" dy="1.4" layer="1" rot="R90"/>
+<smd name="P$3" x="0" y="2.875" dx="5.9" dy="5.75" layer="1" rot="R90"/>
+<wire x1="-3.25" y1="-2.4" x2="3.25" y2="-2.4" width="0.127" layer="21"/>
+<wire x1="3.25" y1="-2.4" x2="3.25" y2="3.7" width="0.127" layer="21"/>
+<wire x1="-3.25" y1="3.7" x2="-3.25" y2="-2.4" width="0.127" layer="21"/>
+<wire x1="-3.25" y1="3.7" x2="3.25" y2="3.7" width="0.127" layer="21"/>
+<circle x="-3.81" y="-3.683" radius="0.179603125" width="0.127" layer="21"/>
+<text x="-3.81" y="-1.27" size="0.8" layer="25" font="vector" ratio="15" rot="R90">&gt;NAME</text>
+</package>
 </packages>
 <symbols>
+<symbol name="BT136">
+<pin name="TOP" x="0" y="5.08" visible="off" length="short" rot="R270"/>
+<pin name="BOT" x="0" y="-5.08" visible="off" length="short" rot="R90"/>
+<wire x1="-5.08" y1="1.27" x2="-2.54" y2="1.27" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="1.27" x2="0" y2="1.27" width="0.254" layer="94"/>
+<wire x1="0" y1="1.27" x2="2.54" y2="1.27" width="0.254" layer="94"/>
+<wire x1="2.54" y1="1.27" x2="5.08" y2="1.27" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-1.27" x2="2.54" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-1.27" x2="0" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.27" x2="-2.54" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-1.27" x2="-5.08" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="1.27" x2="-2.54" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-1.27" x2="0" y2="1.27" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.27" x2="2.54" y2="1.27" width="0.254" layer="94"/>
+<wire x1="2.54" y1="1.27" x2="5.08" y2="-1.27" width="0.254" layer="94"/>
+<pin name="GATE" x="-10.16" y="-2.54" visible="off" length="short"/>
+<wire x1="-7.62" y1="-2.54" x2="-5.08" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="-5.08" y1="-2.54" x2="-2.54" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.27" width="0.1524" layer="94"/>
+</symbol>
 </symbols>
 <devicesets>
+<deviceset name="BT136" prefix="Q">
+<description>Planar passivated very sensitive gate four quadrant triac in a SOT428 (DPAK) surface-mountable
+plastic package intended for use in general purpose bidirectional switching and phase control
+applications, where high sensitivity is required in all four quadrants. This very sensitive gate "series
+D" triac is intended to be interfaced directly to microcontrollers, logic integrated circuits and other
+low power gate trigger circuits.</description>
+<gates>
+<gate name="G$1" symbol="BT136" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="DPAK">
+<connects>
+<connect gate="G$1" pin="BOT" pad="P$1"/>
+<connect gate="G$1" pin="GATE" pad="P$2"/>
+<connect gate="G$1" pin="TOP" pad="P$3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </drawing>

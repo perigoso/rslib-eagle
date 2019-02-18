@@ -73,10 +73,100 @@
 </layers>
 <library>
 <packages>
+<package name="SOIC-20_300MIL">
+<smd name="P$1" x="-5.08" y="-4.7" dx="2" dy="0.6" layer="1" rot="R90"/>
+<smd name="P$2" x="-3.81" y="-4.7" dx="2" dy="0.6" layer="1" rot="R90"/>
+<smd name="P$3" x="-2.54" y="-4.7" dx="2" dy="0.6" layer="1" rot="R90"/>
+<smd name="P$4" x="-1.27" y="-4.7" dx="2" dy="0.6" layer="1" rot="R90"/>
+<smd name="P$5" x="0" y="-4.7" dx="2" dy="0.6" layer="1" rot="R90"/>
+<smd name="P$6" x="1.27" y="-4.7" dx="2" dy="0.6" layer="1" rot="R90"/>
+<smd name="P$7" x="2.54" y="-4.7" dx="2" dy="0.6" layer="1" rot="R90"/>
+<smd name="P$8" x="3.81" y="-4.7" dx="2" dy="0.6" layer="1" rot="R90"/>
+<smd name="P$9" x="5.08" y="-4.7" dx="2" dy="0.6" layer="1" rot="R90"/>
+<smd name="P$10" x="6.35" y="-4.7" dx="2" dy="0.6" layer="1" rot="R270"/>
+<smd name="P$11" x="6.35" y="4.7" dx="2" dy="0.6" layer="1" rot="R90"/>
+<smd name="P$12" x="5.08" y="4.7" dx="2" dy="0.6" layer="1" rot="R90"/>
+<smd name="P$13" x="3.81" y="4.7" dx="2" dy="0.6" layer="1" rot="R90"/>
+<smd name="P$14" x="2.54" y="4.7" dx="2" dy="0.6" layer="1" rot="R90"/>
+<smd name="P$15" x="1.27" y="4.7" dx="2" dy="0.6" layer="1" rot="R90"/>
+<smd name="P$16" x="0" y="4.7" dx="2" dy="0.6" layer="1" rot="R90"/>
+<smd name="P$17" x="-1.27" y="4.7" dx="2" dy="0.6" layer="1" rot="R90"/>
+<smd name="P$18" x="-2.54" y="4.7" dx="2" dy="0.6" layer="1" rot="R90"/>
+<wire x1="-5.75" y1="3.75" x2="7.02" y2="3.75" width="0.127" layer="21"/>
+<wire x1="7.02" y1="3.75" x2="7.02" y2="-3.75" width="0.127" layer="21"/>
+<wire x1="7.02" y1="-3.75" x2="-5.75" y2="-3.75" width="0.127" layer="21"/>
+<wire x1="-5.75" y1="-3.75" x2="-5.75" y2="3.75" width="0.127" layer="21"/>
+<circle x="-6.096" y="-4.699" radius="0.179603125" width="0.127" layer="21"/>
+<text x="-6.35" y="-3.81" size="0.8" layer="21" font="vector" ratio="15" rot="R90">&gt;NAME</text>
+<smd name="P$19" x="-3.81" y="4.7" dx="2" dy="0.6" layer="1" rot="R90"/>
+<smd name="P$20" x="-5.08" y="4.7" dx="2" dy="0.6" layer="1" rot="R90"/>
+</package>
 </packages>
 <symbols>
+<symbol name="MCP2210">
+<wire x1="-12.7" y1="17.78" x2="15.24" y2="17.78" width="0.254" layer="94"/>
+<wire x1="15.24" y1="17.78" x2="15.24" y2="-17.78" width="0.254" layer="94"/>
+<wire x1="15.24" y1="-17.78" x2="-12.7" y2="-17.78" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="-17.78" x2="-12.7" y2="17.78" width="0.254" layer="94"/>
+<text x="-10.16" y="19.05" size="1.778" layer="95">&gt;NAME</text>
+<text x="-10.16" y="-20.32" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="OSC1@2" x="-15.24" y="-2.54" visible="pin" length="short"/>
+<pin name="VDD@1" x="-15.24" y="-12.7" visible="pin" length="short"/>
+<pin name="GP0@5" x="17.78" y="5.08" visible="pin" length="short" rot="R180"/>
+<pin name="MISO@13" x="17.78" y="15.24" visible="pin" length="short" rot="R180"/>
+<pin name="GP5@12" x="17.78" y="-7.62" visible="pin" length="short" rot="R180"/>
+<pin name="SCK@11" x="17.78" y="10.16" visible="pin" length="short" rot="R180"/>
+<pin name="OSC2@3" x="-15.24" y="-5.08" visible="pin" length="short"/>
+<pin name="!RST!@4" x="-15.24" y="-10.16" visible="pin" length="short"/>
+<pin name="GP3@8" x="17.78" y="-2.54" visible="pin" length="short" rot="R180"/>
+<pin name="GP6@14" x="17.78" y="-10.16" visible="pin" length="short" rot="R180"/>
+<pin name="GP7@15" x="17.78" y="-12.7" visible="pin" length="short" rot="R180"/>
+<pin name="GP8@16" x="17.78" y="-15.24" visible="pin" length="short" rot="R180"/>
+<pin name="D+@19" x="-15.24" y="12.7" visible="pin" length="short"/>
+<pin name="D-@18" x="-15.24" y="10.16" visible="pin" length="short"/>
+<pin name="VUSB@17" x="-15.24" y="15.24" visible="pin" length="short"/>
+<pin name="VSS@20" x="-15.24" y="-15.24" visible="pin" length="short"/>
+<pin name="GP1@6" x="17.78" y="2.54" visible="pin" length="short" rot="R180"/>
+<pin name="GP2@7" x="17.78" y="0" visible="pin" length="short" rot="R180"/>
+<pin name="MOSI@9" x="17.78" y="12.7" visible="pin" length="short" rot="R180"/>
+<pin name="GP4@10" x="17.78" y="-5.08" visible="pin" length="short" rot="R180"/>
+</symbol>
 </symbols>
 <devicesets>
+<deviceset name="MCP2210" prefix="U">
+<gates>
+<gate name="G$1" symbol="MCP2210" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOIC-20_300MIL">
+<connects>
+<connect gate="G$1" pin="!RST!@4" pad="P$4"/>
+<connect gate="G$1" pin="D+@19" pad="P$19"/>
+<connect gate="G$1" pin="D-@18" pad="P$18"/>
+<connect gate="G$1" pin="GP0@5" pad="P$5"/>
+<connect gate="G$1" pin="GP1@6" pad="P$6"/>
+<connect gate="G$1" pin="GP2@7" pad="P$7"/>
+<connect gate="G$1" pin="GP3@8" pad="P$8"/>
+<connect gate="G$1" pin="GP4@10" pad="P$10"/>
+<connect gate="G$1" pin="GP5@12" pad="P$12"/>
+<connect gate="G$1" pin="GP6@14" pad="P$14"/>
+<connect gate="G$1" pin="GP7@15" pad="P$15"/>
+<connect gate="G$1" pin="GP8@16" pad="P$16"/>
+<connect gate="G$1" pin="MISO@13" pad="P$13"/>
+<connect gate="G$1" pin="MOSI@9" pad="P$9"/>
+<connect gate="G$1" pin="OSC1@2" pad="P$2"/>
+<connect gate="G$1" pin="OSC2@3" pad="P$3"/>
+<connect gate="G$1" pin="SCK@11" pad="P$11"/>
+<connect gate="G$1" pin="VDD@1" pad="P$1"/>
+<connect gate="G$1" pin="VSS@20" pad="P$20"/>
+<connect gate="G$1" pin="VUSB@17" pad="P$17"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </drawing>

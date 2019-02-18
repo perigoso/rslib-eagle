@@ -73,10 +73,66 @@
 </layers>
 <library>
 <packages>
+<package name="DIP-6-SMD">
+<smd name="P$1" x="-2.54" y="-4.635" dx="1.78" dy="1.52" layer="1" rot="R90"/>
+<smd name="P$2" x="0" y="-4.635" dx="1.78" dy="1.52" layer="1" rot="R90"/>
+<smd name="P$3" x="2.54" y="-4.635" dx="1.78" dy="1.52" layer="1" rot="R90"/>
+<smd name="P$4" x="2.54" y="4.635" dx="1.78" dy="1.52" layer="1" rot="R90"/>
+<smd name="P$5" x="0" y="4.635" dx="1.78" dy="1.52" layer="1" rot="R90"/>
+<smd name="P$6" x="-2.54" y="4.635" dx="1.78" dy="1.52" layer="1" rot="R90"/>
+<wire x1="-4.45" y1="3.3" x2="4.45" y2="3.3" width="0.127" layer="21"/>
+<wire x1="4.45" y1="-3.3" x2="-4.45" y2="-3.3" width="0.127" layer="21"/>
+<wire x1="-4.45" y1="3.3" x2="-4.45" y2="-3.3" width="0.127" layer="21"/>
+<wire x1="4.45" y1="3.3" x2="4.45" y2="-3.3" width="0.127" layer="21"/>
+<circle x="-4.572" y="-4.572" radius="0.359209375" width="0.127" layer="21"/>
+<circle x="-4.572" y="-4.572" radius="0.273434375" width="0.127" layer="21"/>
+<circle x="-4.6" y="-4.6" radius="0.2" width="0.127" layer="21"/>
+<text x="-5.08" y="-2.54" size="0.8" layer="25" font="vector" ratio="15" rot="R90">&gt;NAME</text>
+</package>
 </packages>
 <symbols>
+<symbol name="MOC3051">
+<description>The MOC3051-M and MOC3052-M consist of a AlGaAs infrared emitting diode optically coupled to a non-zero-crossing silicon
+bilateral AC switch (triac). These devices isolate low voltage logic from 115 and 240 Vac lines to provide random phase control of
+high current triacs or thyristors. These devices feature greatly enhanced static dv/dt capability to ensure stable switching performance
+of inductive loads.</description>
+<pin name="AN" x="-10.16" y="5.08" visible="pin" length="short"/>
+<pin name="CA" x="-10.16" y="0" visible="pin" length="short"/>
+<pin name="MAIN@1" x="10.16" y="5.08" visible="pin" length="short" rot="R180"/>
+<pin name="MAIN@2" x="10.16" y="-5.08" visible="pin" length="short" rot="R180"/>
+<wire x1="-7.62" y1="7.62" x2="-7.62" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-5.08" x2="-7.62" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-7.62" x2="7.62" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-7.62" x2="7.62" y2="0" width="0.254" layer="94"/>
+<wire x1="7.62" y1="0" x2="7.62" y2="7.62" width="0.254" layer="94"/>
+<wire x1="7.62" y1="7.62" x2="-7.62" y2="7.62" width="0.254" layer="94"/>
+<text x="-7.62" y="7.874" size="1.27" layer="95">&gt;NAME</text>
+<text x="-7.62" y="-9.652" size="1.27" layer="95">MOC3051</text>
+</symbol>
 </symbols>
 <devicesets>
+<deviceset name="MOC3051" prefix="Q">
+<description>The MOC3051-M and MOC3052-M consist of a AlGaAs infrared emitting diode optically coupled to a non-zero-crossing silicon
+bilateral AC switch (triac). These devices isolate low voltage logic from 115 and 240 Vac lines to provide random phase control of
+high current triacs or thyristors. These devices feature greatly enhanced static dv/dt capability to ensure stable switching performance
+of inductive loads.</description>
+<gates>
+<gate name="G$1" symbol="MOC3051" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="DIP-6-SMD">
+<connects>
+<connect gate="G$1" pin="AN" pad="P$1"/>
+<connect gate="G$1" pin="CA" pad="P$2"/>
+<connect gate="G$1" pin="MAIN@1" pad="P$4"/>
+<connect gate="G$1" pin="MAIN@2" pad="P$6"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </drawing>
