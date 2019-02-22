@@ -73,10 +73,50 @@
 </layers>
 <library>
 <packages>
+<package name="PTR0806">
+<pad name="1" x="3.4" y="0" drill="1.01" rot="R180"/>
+<pad name="2" x="1.7" y="0" drill="1.01" rot="R180"/>
+<pad name="3" x="0" y="0" drill="1.01" rot="R180"/>
+<pad name="4" x="-1.7" y="0" drill="1.01" rot="R180"/>
+<pad name="5" x="-3.4" y="0" drill="1.01" rot="R180"/>
+<circle x="4.309" y="0.909" radius="0.125" width="0.5" layer="21"/>
+</package>
 </packages>
 <symbols>
+<symbol name="PTR0806">
+<pin name="INHIBIT" x="-2.54" y="5.08" length="short"/>
+<pin name="VI" x="-2.54" y="2.54" length="short"/>
+<pin name="GND" x="-2.54" y="0" length="short"/>
+<pin name="VO" x="-2.54" y="-2.54" length="short"/>
+<pin name="VADJ" x="-2.54" y="-5.08" length="short"/>
+<wire x1="0" y1="7.62" x2="0" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="0" y1="-7.62" x2="12.7" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="12.7" y1="-7.62" x2="12.7" y2="7.62" width="0.254" layer="94"/>
+<wire x1="12.7" y1="7.62" x2="0" y2="7.62" width="0.254" layer="94"/>
+<text x="0" y="8.128" size="1.27" layer="95">&gt;NAME</text>
+<text x="0" y="-9.398" size="1.27" layer="95">PTR0806</text>
+</symbol>
 </symbols>
 <devicesets>
+<deviceset name="PTR0806" prefix="M">
+<gates>
+<gate name="G$1" symbol="PTR0806" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="PTR0806">
+<connects>
+<connect gate="G$1" pin="GND" pad="3"/>
+<connect gate="G$1" pin="INHIBIT" pad="1"/>
+<connect gate="G$1" pin="VADJ" pad="5"/>
+<connect gate="G$1" pin="VI" pad="2"/>
+<connect gate="G$1" pin="VO" pad="4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </drawing>
