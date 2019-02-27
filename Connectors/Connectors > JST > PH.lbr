@@ -324,7 +324,12 @@
 <gate name="CASE" symbol="K" x="-2.54" y="-5.08"/>
 </gates>
 <devices>
-<device name="">
+<device name="" package="JST_PH_SMD_2">
+<connects>
+<connect gate="1" pin="S" pad="1"/>
+<connect gate="2" pin="S" pad="2"/>
+<connect gate="CASE" pin="S" pad="P$1 P$2"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>

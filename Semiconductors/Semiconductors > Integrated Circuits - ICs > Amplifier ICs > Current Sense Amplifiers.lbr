@@ -64,7 +64,7 @@
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
-<layer number="93" name="Pins" color="2" fill="1" visible="no" active="yes"/>
+<layer number="93" name="Pins" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
@@ -73,10 +73,56 @@
 </layers>
 <library>
 <packages>
+<package name="SOT-23-5">
+<description>5-Lead Plastic Small outline Transistor (OT) [SOT-23]</description>
+<smd name="P$1" x="-0.95" y="-1.4" dx="1.1" dy="0.6" layer="1" rot="R90"/>
+<smd name="P$2" x="0" y="-1.4" dx="1.1" dy="0.6" layer="1" rot="R90"/>
+<smd name="P$3" x="0.95" y="-1.4" dx="1.1" dy="0.6" layer="1" rot="R90"/>
+<smd name="P$4" x="0.95" y="1.4" dx="1.1" dy="0.6" layer="1" rot="R90"/>
+<smd name="P$5" x="-0.95" y="1.4" dx="1.1" dy="0.6" layer="1" rot="R90"/>
+<wire x1="-1.27" y1="0.635" x2="1.27" y2="0.635" width="0.127" layer="21"/>
+<wire x1="1.27" y1="0.635" x2="1.27" y2="-0.635" width="0.127" layer="21"/>
+<wire x1="1.27" y1="-0.635" x2="-1.27" y2="-0.635" width="0.127" layer="21"/>
+<wire x1="-1.27" y1="-0.635" x2="-1.27" y2="0.635" width="0.127" layer="21"/>
+<circle x="-1.651" y="-0.889" radius="0.127" width="0.127" layer="21"/>
+<text x="-2.159" y="-2.159" size="0.8" layer="25" font="vector" ratio="15" rot="R90">&gt;NAME</text>
+</package>
 </packages>
 <symbols>
+<symbol name="AD8211">
+<pin name="VIN+@3" x="-2.54" y="12.7" visible="pin" length="short" rot="R270"/>
+<pin name="VIN-@4" x="2.54" y="12.7" visible="pin" length="short" rot="R270"/>
+<pin name="V+@5" x="7.62" y="2.54" visible="pin" length="short" rot="R180"/>
+<pin name="OUT@1" x="7.62" y="-2.54" visible="pin" length="short" rot="R180"/>
+<pin name="GND@2" x="-2.54" y="-10.16" visible="pin" length="short" rot="R90"/>
+<wire x1="-5.08" y1="10.16" x2="5.08" y2="10.16" width="0.254" layer="94"/>
+<wire x1="5.08" y1="10.16" x2="5.08" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-7.62" x2="-5.08" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-7.62" x2="-5.08" y2="10.16" width="0.254" layer="94"/>
+<text x="0" y="-10.16" size="1.27" layer="95">&gt;NAME</text>
+<text x="0" y="-12.7" size="1.27" layer="95">&gt;VALUE</text>
+</symbol>
 </symbols>
 <devicesets>
+<deviceset name="AD8211" prefix="U">
+<gates>
+<gate name="G$1" symbol="AD8211" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOT-23-5">
+<connects>
+<connect gate="G$1" pin="GND@2" pad="P$2"/>
+<connect gate="G$1" pin="OUT@1" pad="P$1"/>
+<connect gate="G$1" pin="V+@5" pad="P$5"/>
+<connect gate="G$1" pin="VIN+@3" pad="P$3"/>
+<connect gate="G$1" pin="VIN-@4" pad="P$4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </drawing>
