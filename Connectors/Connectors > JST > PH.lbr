@@ -319,16 +319,16 @@
 <devicesets>
 <deviceset name="PH-2" prefix="J">
 <gates>
-<gate name="1" symbol="K" x="-2.54" y="2.54"/>
-<gate name="2" symbol="K" x="-2.54" y="0"/>
-<gate name="CASE" symbol="K" x="-2.54" y="-5.08"/>
+<gate name="-1" symbol="K" x="-2.54" y="2.54"/>
+<gate name="-2" symbol="K" x="-2.54" y="0"/>
+<gate name="-CASE" symbol="K" x="-2.54" y="-5.08"/>
 </gates>
 <devices>
 <device name="" package="JST_PH_SMD_2">
 <connects>
-<connect gate="1" pin="S" pad="1"/>
-<connect gate="2" pin="S" pad="2"/>
-<connect gate="CASE" pin="S" pad="P$1 P$2"/>
+<connect gate="-1" pin="S" pad="1"/>
+<connect gate="-2" pin="S" pad="2"/>
+<connect gate="-CASE" pin="S" pad="P$1 P$2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -338,18 +338,18 @@
 </deviceset>
 <deviceset name="PH-3" prefix="J">
 <gates>
-<gate name="1" symbol="K" x="0" y="5.08"/>
-<gate name="2" symbol="K" x="0" y="2.54"/>
-<gate name="3" symbol="K" x="0" y="0"/>
-<gate name="CASE" symbol="K" x="0" y="-5.08"/>
+<gate name="-1" symbol="K" x="0" y="5.08"/>
+<gate name="-2" symbol="K" x="0" y="2.54"/>
+<gate name="-3" symbol="K" x="0" y="0"/>
+<gate name="-CASE" symbol="K" x="0" y="-5.08"/>
 </gates>
 <devices>
 <device name="" package="JST_PH_SMD_3">
 <connects>
-<connect gate="1" pin="S" pad="1"/>
-<connect gate="2" pin="S" pad="2"/>
-<connect gate="3" pin="S" pad="3"/>
-<connect gate="CASE" pin="S" pad="P$1 P$2"/>
+<connect gate="-1" pin="S" pad="1"/>
+<connect gate="-2" pin="S" pad="2"/>
+<connect gate="-3" pin="S" pad="3"/>
+<connect gate="-CASE" pin="S" pad="P$1 P$2"/>
 </connects>
 <technologies>
 <technology name=""/>
