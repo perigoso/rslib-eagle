@@ -342,6 +342,13 @@
 <pin name="V_USB" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
 <text x="0" y="2.794" size="1.778" layer="96" align="bottom-center">&gt;VALUE</text>
 </symbol>
+<symbol name="3.6V">
+<description>&lt;h3&gt;3.3V Voltage Supply&lt;/h3&gt;</description>
+<wire x1="0.762" y1="1.27" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="-0.762" y2="1.27" width="0.254" layer="94"/>
+<pin name="3.6V" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
+<text x="0" y="2.794" size="1.778" layer="96" align="bottom-center">&gt;VALUE</text>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="1.0V" prefix="SUPPLY">
@@ -386,7 +393,7 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="2PT_GND_TIE" prefix="SUPPLY">
+<deviceset name="GND-TIE" prefix="SUPPLY">
 <description>&lt;h3&gt;Dual Ground Supply&lt;/h3&gt;
 &lt;p&gt;Power supply symbol for connecting two grounds.&lt;/p&gt;
 &lt;p&gt;SparkFun Products:
@@ -575,34 +582,6 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="VCC_1" prefix="SUPPLY">
-<description>&lt;h3&gt;VCC1 Voltage Supply&lt;/h3&gt;
-&lt;p&gt;Primary VCC voltage supply - Useful for a system with multiple VCC supplies.&lt;/p&gt;</description>
-<gates>
-<gate name="G$2" symbol="VCC_1" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="VCC_2" prefix="SUPPLY">
-<description>&lt;h3&gt;VCC2 Voltage Supply&lt;/h3&gt;
-&lt;p&gt;Secondary VCC voltage supply - Useful for a system with multiple VCC supplies.&lt;/p&gt;</description>
-<gates>
-<gate name="G$1" symbol="VCC_2" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="VDD" prefix="SUPPLY">
 <description>&lt;h3&gt;VDD Voltage Supply&lt;/h3&gt;
 &lt;p&gt;Positive voltage supply (traditionally for a CMOS device, D=drain).&lt;/p&gt;</description>
@@ -673,7 +652,7 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="V_BATT" prefix="SUPPLY">
+<deviceset name="V-BAT" prefix="SUPPLY">
 <description>&lt;h3&gt;Battery Voltage Supply&lt;/h3&gt;
 &lt;p&gt;Generic symbol for the battery input to a system.&lt;/p&gt;</description>
 <gates>
@@ -687,10 +666,24 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="V_USB" prefix="SUPPLY">
+<deviceset name="V-USB" prefix="SUPPLY">
 <description>&lt;h3&gt;USB Voltage Supply&lt;/h3&gt;</description>
 <gates>
 <gate name="G$1" symbol="V_USB" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="3.6V" prefix="SUPPLY">
+<description>&lt;h3&gt;3.3V Supply Symbol&lt;/h3&gt;
+&lt;p&gt;Power supply symbol for a specifically-stated 3.3V source.&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="3.6V" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">

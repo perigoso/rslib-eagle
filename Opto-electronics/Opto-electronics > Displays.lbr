@@ -578,8 +578,7 @@ Source: http://www.hirose.co.jp/cataloge_hp/e58618038.pdf</description>
 <smd name="M1" x="57.694" y="15.5" dx="2" dy="3" layer="16" rot="R90"/>
 <smd name="M2" x="57.694" y="43.08" dx="2" dy="3" layer="16" rot="R90"/>
 <text x="61.869" y="43.79" size="0.8" layer="26" font="vector" ratio="15" rot="MR270">&gt;NAME</text>
-<text x="3" y="8.429" size="1.27" layer="27" rot="R180">&gt;VALUE</text>
-<text x="20" y="28" size="3" layer="51" ratio="10" rot="R90" align="center">3.5"
+<text x="20" y="28" size="3" layer="51" font="fixed" ratio="10" rot="R90" align="center">3.5"
 
 320x480 dots
 
