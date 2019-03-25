@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="50" unitdist="mil" unit="mm" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -156,7 +156,7 @@
 </layers>
 <library>
 <packages>
-<package name="TSSOP-16(NOPAD)">
+<package name="TSSOP-16">
 <smd name="1" x="-2.275" y="-2.8" dx="1.5" dy="0.45" layer="1" rot="R90"/>
 <smd name="2" x="-1.625" y="-2.8" dx="1.5" dy="0.45" layer="1" rot="R90"/>
 <smd name="3" x="-0.975" y="-2.8" dx="1.5" dy="0.45" layer="1" rot="R90"/>
@@ -185,20 +185,25 @@
 </polygon>
 </package>
 <package name="SC-70-5">
-<smd name="1" x="-0.65" y="-1" dx="0.9" dy="0.4" layer="1" rot="R90"/>
-<smd name="2" x="0" y="-1" dx="0.9" dy="0.4" layer="1" rot="R90"/>
-<smd name="3" x="0.65" y="-1" dx="0.9" dy="0.4" layer="1" rot="R90"/>
-<smd name="4" x="0.65" y="1" dx="0.9" dy="0.4" layer="1" rot="R90"/>
-<smd name="5" x="-0.65" y="1" dx="0.9" dy="0.4" layer="1" rot="R90"/>
-<wire x1="-1.1" y1="0.675" x2="1.1" y2="0.675" width="0.127" layer="21"/>
-<wire x1="1.1" y1="0.675" x2="1.1" y2="-0.675" width="0.127" layer="21"/>
-<wire x1="1.1" y1="-0.675" x2="-1.1" y2="-0.675" width="0.127" layer="21"/>
-<wire x1="-1.1" y1="-0.675" x2="-1.1" y2="0.675" width="0.127" layer="21"/>
+<smd name="1" x="-0.65" y="-1" dx="0.75" dy="0.4" layer="1" rot="R90"/>
+<smd name="2" x="0" y="-1" dx="0.75" dy="0.4" layer="1" rot="R90"/>
+<smd name="3" x="0.65" y="-1" dx="0.75" dy="0.4" layer="1" rot="R90"/>
+<smd name="4" x="0.65" y="1" dx="0.75" dy="0.4" layer="1" rot="R90"/>
+<smd name="5" x="-0.65" y="1" dx="0.75" dy="0.4" layer="1" rot="R90"/>
 <text x="-1.27" y="-2.54" size="0.8" layer="21" font="vector" ratio="15">&gt;NAME</text>
+<wire x1="1" y1="0.55" x2="-1" y2="0.55" width="0.127" layer="51"/>
+<wire x1="-1" y1="0.55" x2="-1" y2="-0.55" width="0.127" layer="21"/>
+<wire x1="-1" y1="-0.55" x2="1" y2="-0.55" width="0.127" layer="51"/>
+<wire x1="1" y1="-0.55" x2="1" y2="0.55" width="0.127" layer="21"/>
+<rectangle x1="-0.125" y1="-1.05" x2="0.125" y2="-0.6" layer="51"/>
+<rectangle x1="-0.775" y1="-1.05" x2="-0.525" y2="-0.6" layer="51"/>
+<rectangle x1="0.525" y1="-1.05" x2="0.775" y2="-0.6" layer="51"/>
+<rectangle x1="-0.775" y1="0.6" x2="-0.525" y2="1.05" layer="51"/>
+<rectangle x1="0.525" y1="0.6" x2="0.775" y2="1.05" layer="51"/>
 </package>
 </packages>
 <symbols>
-<symbol name="SN74HC595">
+<symbol name="74HC595">
 <pin name="!SRCLR!@10" x="-12.7" y="10.16" visible="pin" length="short"/>
 <pin name="SRCLK@11" x="-12.7" y="7.62" visible="pin" length="short"/>
 <pin name="RCLK@12" x="-12.7" y="5.08" visible="pin" length="short"/>
@@ -295,10 +300,10 @@
 <devicesets>
 <deviceset name="74HC595" prefix="U">
 <gates>
-<gate name="G$1" symbol="SN74HC595" x="0" y="0"/>
+<gate name="G$1" symbol="74HC595" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="TSSOP-16(NOPAD)">
+<device name="" package="TSSOP-16">
 <connects>
 <connect gate="G$1" pin="!SRCLR!@10" pad="10"/>
 <connect gate="G$1" pin="GND@8" pad="8"/>
@@ -370,7 +375,7 @@
 <gate name="G$1" symbol="74HC123" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="TSSOP-16(NOPAD)">
+<device name="" package="TSSOP-16">
 <connects>
 <connect gate="G$1" pin="1!A@1" pad="1"/>
 <connect gate="G$1" pin="1!Q@4" pad="4"/>
