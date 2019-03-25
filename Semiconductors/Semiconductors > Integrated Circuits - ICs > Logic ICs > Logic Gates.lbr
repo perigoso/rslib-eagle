@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="50" unitdist="mil" unit="mm" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -353,16 +353,16 @@
 <gates>
 <gate name="VCC" symbol="POW" x="-2.54" y="12.7"/>
 <gate name="GND" symbol="POW" x="0" y="12.7"/>
-<gate name="G$1" symbol="OR" x="0" y="0"/>
+<gate name="_" symbol="OR" x="0" y="0"/>
 </gates>
 <devices>
 <device name="" package="SC-70-5">
 <connects>
-<connect gate="G$1" pin="A" pad="2"/>
-<connect gate="G$1" pin="B" pad="1"/>
-<connect gate="G$1" pin="Y" pad="4"/>
 <connect gate="GND" pin="P$1" pad="3"/>
 <connect gate="VCC" pin="P$1" pad="5"/>
+<connect gate="_" pin="A" pad="2"/>
+<connect gate="_" pin="B" pad="1"/>
+<connect gate="_" pin="Y" pad="4"/>
 </connects>
 <technologies>
 <technology name=""/>
