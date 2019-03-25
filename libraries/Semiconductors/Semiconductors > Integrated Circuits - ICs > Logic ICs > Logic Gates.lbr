@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -241,7 +241,7 @@
 <symbol name="POW">
 <pin name="P$1" x="0" y="2.54" visible="pad" length="short" rot="R270"/>
 <wire x1="-1.016" y1="0" x2="1.016" y2="0" width="0.254" layer="94"/>
-<text x="0" y="0" size="1.778" layer="95" ratio="15" rot="R90" align="center-right">&gt;NAME</text>
+<text x="0" y="-0.762" size="1.778" layer="95" ratio="15" rot="R90" align="center-right">&gt;NAME</text>
 </symbol>
 <symbol name="OR">
 <text x="-5.08" y="7.62" size="1.778" layer="95" align="top-left">&gt;NAME</text>
@@ -273,28 +273,19 @@
 <wire x1="-5.842" y1="5.08" x2="-5.842" y2="-5.08" width="0.1524" layer="94" curve="-60"/>
 </symbol>
 <symbol name="74HC123">
-<pin name="1!A@1" x="-12.7" y="7.62" length="short"/>
-<pin name="1B@2" x="-12.7" y="5.08" length="short"/>
-<pin name="1!RD@3" x="-12.7" y="2.54" length="short"/>
-<pin name="2!A@9" x="-12.7" y="-5.08" length="short"/>
-<pin name="2B@10" x="-12.7" y="-7.62" length="short"/>
-<pin name="2!RD@11" x="-12.7" y="-10.16" length="short"/>
-<pin name="1CEXT@14" x="12.7" y="10.16" length="short" rot="R180"/>
-<pin name="1REXT/CEXT@15" x="12.7" y="7.62" length="short" rot="R180"/>
-<pin name="1Q@13" x="12.7" y="5.08" length="short" rot="R180"/>
-<pin name="1!Q@4" x="12.7" y="2.54" length="short" rot="R180"/>
-<pin name="2CEXT@6" x="12.7" y="-2.54" length="short" rot="R180"/>
-<pin name="2REXT/CEXT@7" x="12.7" y="-5.08" length="short" rot="R180"/>
-<pin name="2Q@5" x="12.7" y="-7.62" length="short" rot="R180"/>
-<pin name="2!Q@12" x="12.7" y="-10.16" length="short" rot="R180"/>
-<wire x1="-10.16" y1="15.24" x2="10.16" y2="15.24" width="0.254" layer="94"/>
-<wire x1="10.16" y1="15.24" x2="10.16" y2="-17.78" width="0.254" layer="94"/>
-<wire x1="10.16" y1="-17.78" x2="-10.16" y2="-17.78" width="0.254" layer="94"/>
-<wire x1="-10.16" y1="-17.78" x2="-10.16" y2="15.24" width="0.254" layer="94"/>
-<text x="-10.16" y="17.78" size="1.27" layer="95" align="top-left">&gt;NAME</text>
-<text x="-10.16" y="-20.32" size="1.27" layer="95">&gt;VALUE</text>
-<pin name="VCC@16" x="-12.7" y="12.7" length="short"/>
-<pin name="GND@8" x="-12.7" y="-15.24" length="short"/>
+<wire x1="-10.16" y1="10.16" x2="10.16" y2="10.16" width="0.254" layer="94"/>
+<wire x1="10.16" y1="10.16" x2="10.16" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-10.16" x2="-10.16" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-10.16" x2="-10.16" y2="10.16" width="0.254" layer="94"/>
+<text x="-10.16" y="12.7" size="1.27" layer="95" align="top-left">&gt;NAME</text>
+<text x="-10.16" y="-12.7" size="1.27" layer="95">&gt;VALUE</text>
+<pin name="!A" x="-12.7" y="7.62" length="short"/>
+<pin name="B" x="-12.7" y="5.08" length="short"/>
+<pin name="!RD" x="-12.7" y="-7.62" length="short"/>
+<pin name="C" x="-12.7" y="0" length="short"/>
+<pin name="R/C" x="-12.7" y="-2.54" length="short"/>
+<pin name="Q" x="12.7" y="5.08" length="short" rot="R180"/>
+<pin name="!Q" x="12.7" y="2.54" length="short" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -331,14 +322,14 @@
 <deviceset name="74LVC1G08" prefix="U">
 <gates>
 <gate name="_" symbol="AND" x="0" y="0"/>
-<gate name="VCC" symbol="POW" x="-2.54" y="12.7"/>
-<gate name="GND" symbol="POW" x="0" y="12.7"/>
+<gate name="-VCC" symbol="POW" x="-2.54" y="12.7"/>
+<gate name="-GND" symbol="POW" x="0" y="12.7"/>
 </gates>
 <devices>
 <device name="" package="SC-70-5">
 <connects>
-<connect gate="GND" pin="P$1" pad="3"/>
-<connect gate="VCC" pin="P$1" pad="5"/>
+<connect gate="-GND" pin="P$1" pad="3"/>
+<connect gate="-VCC" pin="P$1" pad="5"/>
 <connect gate="_" pin="A" pad="2"/>
 <connect gate="_" pin="B" pad="1"/>
 <connect gate="_" pin="Y" pad="4"/>
@@ -351,15 +342,15 @@
 </deviceset>
 <deviceset name="74LVC1G32" prefix="U">
 <gates>
-<gate name="VCC" symbol="POW" x="-2.54" y="12.7"/>
-<gate name="GND" symbol="POW" x="0" y="12.7"/>
 <gate name="_" symbol="OR" x="0" y="0"/>
+<gate name="-VCC" symbol="POW" x="-5.08" y="15.24"/>
+<gate name="-GND" symbol="POW" x="0" y="15.24"/>
 </gates>
 <devices>
 <device name="" package="SC-70-5">
 <connects>
-<connect gate="GND" pin="P$1" pad="3"/>
-<connect gate="VCC" pin="P$1" pad="5"/>
+<connect gate="-GND" pin="P$1" pad="3"/>
+<connect gate="-VCC" pin="P$1" pad="5"/>
 <connect gate="_" pin="A" pad="2"/>
 <connect gate="_" pin="B" pad="1"/>
 <connect gate="_" pin="Y" pad="4"/>
@@ -370,29 +361,32 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="74HC123">
+<deviceset name="74HC123" prefix="U">
 <gates>
-<gate name="G$1" symbol="74HC123" x="0" y="0"/>
+<gate name="-A" symbol="74HC123" x="0" y="12.7"/>
+<gate name="-B" symbol="74HC123" x="0" y="-12.7"/>
+<gate name="-VCC" symbol="POW" x="27.94" y="12.7"/>
+<gate name="-GND" symbol="POW" x="33.02" y="12.7"/>
 </gates>
 <devices>
 <device name="" package="TSSOP-16">
 <connects>
-<connect gate="G$1" pin="1!A@1" pad="1"/>
-<connect gate="G$1" pin="1!Q@4" pad="4"/>
-<connect gate="G$1" pin="1!RD@3" pad="3"/>
-<connect gate="G$1" pin="1B@2" pad="2"/>
-<connect gate="G$1" pin="1CEXT@14" pad="14"/>
-<connect gate="G$1" pin="1Q@13" pad="13"/>
-<connect gate="G$1" pin="1REXT/CEXT@15" pad="15"/>
-<connect gate="G$1" pin="2!A@9" pad="9"/>
-<connect gate="G$1" pin="2!Q@12" pad="12"/>
-<connect gate="G$1" pin="2!RD@11" pad="11"/>
-<connect gate="G$1" pin="2B@10" pad="10"/>
-<connect gate="G$1" pin="2CEXT@6" pad="6"/>
-<connect gate="G$1" pin="2Q@5" pad="5"/>
-<connect gate="G$1" pin="2REXT/CEXT@7" pad="7"/>
-<connect gate="G$1" pin="GND@8" pad="8"/>
-<connect gate="G$1" pin="VCC@16" pad="16"/>
+<connect gate="-A" pin="!A" pad="1"/>
+<connect gate="-A" pin="!Q" pad="4"/>
+<connect gate="-A" pin="!RD" pad="3"/>
+<connect gate="-A" pin="B" pad="2"/>
+<connect gate="-A" pin="C" pad="14"/>
+<connect gate="-A" pin="Q" pad="13"/>
+<connect gate="-A" pin="R/C" pad="15"/>
+<connect gate="-B" pin="!A" pad="9"/>
+<connect gate="-B" pin="!Q" pad="12"/>
+<connect gate="-B" pin="!RD" pad="11"/>
+<connect gate="-B" pin="B" pad="10"/>
+<connect gate="-B" pin="C" pad="6"/>
+<connect gate="-B" pin="Q" pad="5"/>
+<connect gate="-B" pin="R/C" pad="7"/>
+<connect gate="-GND" pin="P$1" pad="8"/>
+<connect gate="-VCC" pin="P$1" pad="16"/>
 </connects>
 <technologies>
 <technology name=""/>
