@@ -219,19 +219,14 @@
 </symbol>
 <symbol name="USBSHIELD">
 <wire x1="10.16" y1="6.35" x2="-2.54" y2="6.35" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="6.35" x2="-2.54" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="-2.54" x2="-2.54" y2="-3.81" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="6.35" x2="-2.54" y2="-5.08" width="0.254" layer="94"/>
 <wire x1="-2.54" y1="-5.08" x2="10.16" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="-5.08" x2="-2.54" y2="-2.54" width="0.254" layer="94"/>
 <text x="1.27" y="-2.54" size="2.54" layer="94" rot="R90">USB</text>
-<pin name="D+" x="-5.08" y="5.08" visible="pad" length="short"/>
-<pin name="D-" x="-5.08" y="2.54" visible="pad" length="short"/>
-<pin name="VBUS" x="-5.08" y="0" visible="pad" length="short"/>
+<pin name="D+" x="-5.08" y="2.54" visible="pad" length="short"/>
+<pin name="D-" x="-5.08" y="0" visible="pad" length="short"/>
+<pin name="VBUS" x="-5.08" y="5.08" visible="pad" length="short"/>
 <pin name="GND" x="-5.08" y="-2.54" visible="pad" length="short"/>
-<pin name="GND@1" x="0" y="-7.62" visible="pad" length="short" rot="R90"/>
-<pin name="GND@2" x="2.54" y="-7.62" visible="pad" length="short" rot="R90"/>
-<pin name="GND@3" x="5.08" y="-7.62" visible="pad" length="short" rot="R90"/>
-<pin name="GND@4" x="7.62" y="-7.62" visible="pad" length="short" rot="R90"/>
+<pin name="CASE" x="0" y="-7.62" visible="off" length="short" rot="R90"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -264,13 +259,10 @@ USB connector with shield pins connectable</description>
 <devices>
 <device name="" package="USB-M-S1">
 <connects>
+<connect gate="USB" pin="CASE" pad="GND@1 GND@2 GND@3 GND@4"/>
 <connect gate="USB" pin="D+" pad="D+"/>
 <connect gate="USB" pin="D-" pad="D-"/>
 <connect gate="USB" pin="GND" pad="GND"/>
-<connect gate="USB" pin="GND@1" pad="GND@1"/>
-<connect gate="USB" pin="GND@2" pad="GND@2"/>
-<connect gate="USB" pin="GND@3" pad="GND@3"/>
-<connect gate="USB" pin="GND@4" pad="GND@4"/>
 <connect gate="USB" pin="VBUS" pad="VBUS"/>
 </connects>
 <technologies>
