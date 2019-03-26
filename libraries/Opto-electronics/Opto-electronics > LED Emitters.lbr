@@ -847,10 +847,10 @@
 </device>
 <device name="3535" package="3535">
 <connects>
-<connect gate="G$1" pin="DI" pad="1"/>
-<connect gate="G$1" pin="DO" pad="3"/>
-<connect gate="G$1" pin="VDD" pad="2"/>
-<connect gate="G$1" pin="VSS" pad="4"/>
+<connect gate="G$1" pin="DI" pad="2"/>
+<connect gate="G$1" pin="DO" pad="4"/>
+<connect gate="G$1" pin="VDD" pad="3"/>
+<connect gate="G$1" pin="VSS" pad="1"/>
 </connects>
 <technologies>
 <technology name=""/>

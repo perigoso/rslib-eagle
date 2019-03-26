@@ -170,7 +170,6 @@
 <rectangle x1="0.4318" y1="-0.4" x2="0.8382" y2="0.4" layer="51"/>
 <rectangle x1="-0.8382" y1="-0.4" x2="-0.4318" y2="0.4" layer="51"/>
 <text x="-1.778" y="0.9525" size="0.8" layer="25" font="vector" ratio="15">&gt;NAME</text>
-<text x="-1.778" y="-1.7463" size="0.8" layer="27" font="vector" ratio="15">&gt;VALUE</text>
 </package>
 <package name="_0402">
 <description>&lt;b&gt; 0402&lt;/b&gt;</description>
