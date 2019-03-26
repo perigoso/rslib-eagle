@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -73,7 +73,7 @@
 </layers>
 <library>
 <packages>
-<package name="TMG3993">
+<package name="LGA8-TMG3993">
 <wire x1="-1.18" y1="1.97" x2="1.18" y2="1.97" width="0.127" layer="21"/>
 <wire x1="1.18" y1="1.97" x2="1.18" y2="-1.002" width="0.127" layer="21"/>
 <wire x1="1.18" y1="-1.002" x2="1.18" y2="-1.97" width="0.127" layer="21"/>
@@ -91,13 +91,8 @@
 <circle x="0" y="-1.45" radius="0.45" width="0.127" layer="21"/>
 <wire x1="-1.18" y1="-1.002" x2="-1.18" y2="1.97" width="0.127" layer="21"/>
 <wire x1="-1.18" y1="-1.002" x2="1.18" y2="-1.002" width="0.127" layer="21"/>
-<text x="0" y="-1.397" size="0.25" layer="51" align="center">LED</text>
 <text x="0" y="-2.286" size="0.25" layer="51" align="center">NORTH</text>
-<circle x="0" y="1.524" radius="0.1" width="0.127" layer="51"/>
-<circle x="0.254" y="1.27" radius="0.1" width="0.127" layer="51"/>
-<circle x="-0.254" y="1.27" radius="0.1" width="0.127" layer="51"/>
-<circle x="0" y="1.016" radius="0.1" width="0.127" layer="51"/>
-<text x="2.54" y="-2.54" size="0.8" layer="51" font="vector" ratio="15" rot="R90">&gt;NAME</text>
+<text x="2.54" y="-2.54" size="0.8" layer="25" font="vector" ratio="15" rot="R90">&gt;NAME</text>
 </package>
 </packages>
 <symbols>
@@ -124,7 +119,7 @@
 <gate name="G$1" symbol="TMG3993" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="TMG3993">
+<device name="" package="LGA8-TMG3993">
 <connects>
 <connect gate="G$1" pin="GND@3" pad="3"/>
 <connect gate="G$1" pin="INT@7" pad="7"/>
