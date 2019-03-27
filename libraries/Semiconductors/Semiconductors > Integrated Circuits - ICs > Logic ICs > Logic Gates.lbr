@@ -201,6 +201,26 @@
 <rectangle x1="-0.775" y1="0.6" x2="-0.525" y2="1.05" layer="51"/>
 <rectangle x1="0.525" y1="0.6" x2="0.775" y2="1.05" layer="51"/>
 </package>
+<package name="TSSOP-8">
+<smd name="1" x="-1.005" y="-2.081" dx="1" dy="0.45" layer="1" rot="R90"/>
+<smd name="2" x="-0.355" y="-2.081" dx="1" dy="0.45" layer="1" rot="R90"/>
+<smd name="3" x="0.295" y="-2.081" dx="1" dy="0.45" layer="1" rot="R90"/>
+<smd name="4" x="0.945" y="-2.081" dx="1" dy="0.45" layer="1" rot="R90"/>
+<smd name="5" x="0.945" y="2.081" dx="1" dy="0.45" layer="1" rot="R90"/>
+<smd name="6" x="0.295" y="2.081" dx="1" dy="0.45" layer="1" rot="R90"/>
+<smd name="7" x="-0.355" y="2.081" dx="1" dy="0.45" layer="1" rot="R90"/>
+<smd name="8" x="-1.005" y="2.081" dx="1" dy="0.45" layer="1" rot="R90"/>
+<wire x1="-1.5" y1="1.5" x2="1.5" y2="1.5" width="0.127" layer="21"/>
+<wire x1="1.5" y1="1.5" x2="1.5" y2="-1.5" width="0.127" layer="21"/>
+<wire x1="1.5" y1="-1.5" x2="-1.5" y2="-1.5" width="0.127" layer="21"/>
+<wire x1="-1.5" y1="-1.5" x2="-1.5" y2="1.5" width="0.127" layer="21"/>
+<text x="2.54" y="-2.54" size="0.8" layer="25" font="vector" ratio="15" rot="R90">&gt;NAME</text>
+<polygon width="0" layer="21">
+<vertex x="-1.524" y="-0.254"/>
+<vertex x="-1.524" y="-1.524"/>
+<vertex x="-0.254" y="-1.524"/>
+</polygon>
+</package>
 </packages>
 <symbols>
 <symbol name="74HC595">
@@ -289,6 +309,21 @@
 <pin name="Q" x="12.7" y="5.08" length="short" rot="R180"/>
 <pin name="!Q" x="12.7" y="2.54" length="short" rot="R180"/>
 </symbol>
+<symbol name="BUF-SCHMITT-TRIGGER">
+<text x="-5.08" y="7.62" size="1.778" layer="95" align="top-left">&gt;NAME</text>
+<text x="-5.08" y="-7.62" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="A" x="-7.62" y="0" visible="pad" length="short" direction="in"/>
+<pin name="Y" x="7.62" y="0" visible="pad" length="short" direction="out" rot="R180"/>
+<wire x1="-5.08" y1="-5.08" x2="-5.08" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="-5.08" y1="-5.08" x2="5.08" y2="0" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="0" x2="-5.08" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="-3.556" y1="-1.27" x2="-2.54" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="-1.27" x2="-2.54" y2="1.27" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="1.27" x2="-1.524" y2="1.27" width="0.1524" layer="94"/>
+<wire x1="-1.524" y1="1.27" x2="-0.508" y2="1.27" width="0.1524" layer="94"/>
+<wire x1="-1.524" y1="1.27" x2="-1.524" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="-1.524" y1="-1.27" x2="-2.54" y2="-1.27" width="0.1524" layer="94"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="74HC595" prefix="U">
@@ -323,15 +358,15 @@
 </deviceset>
 <deviceset name="74LVC1G08" prefix="U">
 <gates>
-<gate name=".A" symbol="AND" x="0" y="0"/>
+<gate name=".1" symbol="AND" x="0" y="0"/>
 <gate name=".PW" symbol="POW" x="15.24" y="2.54"/>
 </gates>
 <devices>
 <device name="" package="SC-70-5">
 <connects>
-<connect gate=".A" pin="A" pad="2"/>
-<connect gate=".A" pin="B" pad="1"/>
-<connect gate=".A" pin="Y" pad="4"/>
+<connect gate=".1" pin="A" pad="2"/>
+<connect gate=".1" pin="B" pad="1"/>
+<connect gate=".1" pin="Y" pad="4"/>
 <connect gate=".PW" pin="GND" pad="3"/>
 <connect gate=".PW" pin="VCC" pad="5"/>
 </connects>
@@ -343,15 +378,15 @@
 </deviceset>
 <deviceset name="74LVC1G32" prefix="U">
 <gates>
-<gate name=".A" symbol="OR" x="0" y="0"/>
+<gate name=".1" symbol="OR" x="0" y="0"/>
 <gate name=".PW" symbol="POW" x="15.24" y="2.54"/>
 </gates>
 <devices>
 <device name="" package="SC-70-5">
 <connects>
-<connect gate=".A" pin="A" pad="2"/>
-<connect gate=".A" pin="B" pad="1"/>
-<connect gate=".A" pin="Y" pad="4"/>
+<connect gate=".1" pin="A" pad="2"/>
+<connect gate=".1" pin="B" pad="1"/>
+<connect gate=".1" pin="Y" pad="4"/>
 <connect gate=".PW" pin="GND" pad="3"/>
 <connect gate=".PW" pin="VCC" pad="5"/>
 </connects>
@@ -363,27 +398,27 @@
 </deviceset>
 <deviceset name="74HC123" prefix="U">
 <gates>
-<gate name=".A" symbol="74HC123" x="0" y="12.7"/>
-<gate name=".B" symbol="74HC123" x="0" y="-12.7"/>
+<gate name=".1" symbol="74HC123" x="0" y="12.7"/>
+<gate name=".2" symbol="74HC123" x="0" y="-12.7"/>
 <gate name=".PW" symbol="POW" x="27.94" y="12.7"/>
 </gates>
 <devices>
 <device name="" package="TSSOP-16">
 <connects>
-<connect gate=".A" pin="!A" pad="1"/>
-<connect gate=".A" pin="!Q" pad="4"/>
-<connect gate=".A" pin="!RD" pad="3"/>
-<connect gate=".A" pin="B" pad="2"/>
-<connect gate=".A" pin="C" pad="14"/>
-<connect gate=".A" pin="Q" pad="13"/>
-<connect gate=".A" pin="R/C" pad="15"/>
-<connect gate=".B" pin="!A" pad="9"/>
-<connect gate=".B" pin="!Q" pad="12"/>
-<connect gate=".B" pin="!RD" pad="11"/>
-<connect gate=".B" pin="B" pad="10"/>
-<connect gate=".B" pin="C" pad="6"/>
-<connect gate=".B" pin="Q" pad="5"/>
-<connect gate=".B" pin="R/C" pad="7"/>
+<connect gate=".1" pin="!A" pad="1"/>
+<connect gate=".1" pin="!Q" pad="4"/>
+<connect gate=".1" pin="!RD" pad="3"/>
+<connect gate=".1" pin="B" pad="2"/>
+<connect gate=".1" pin="C" pad="14"/>
+<connect gate=".1" pin="Q" pad="13"/>
+<connect gate=".1" pin="R/C" pad="15"/>
+<connect gate=".2" pin="!A" pad="9"/>
+<connect gate=".2" pin="!Q" pad="12"/>
+<connect gate=".2" pin="!RD" pad="11"/>
+<connect gate=".2" pin="B" pad="10"/>
+<connect gate=".2" pin="C" pad="6"/>
+<connect gate=".2" pin="Q" pad="5"/>
+<connect gate=".2" pin="R/C" pad="7"/>
 <connect gate=".PW" pin="GND" pad="8"/>
 <connect gate=".PW" pin="VCC" pad="16"/>
 </connects>
@@ -406,6 +441,31 @@
 <connect gate=".A" pin="Y" pad="4"/>
 <connect gate=".PW" pin="GND" pad="3"/>
 <connect gate=".PW" pin="VCC" pad="5"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="74LVC3G17" prefix="U">
+<gates>
+<gate name=".1" symbol="BUF-SCHMITT-TRIGGER" x="2.54" y="12.7"/>
+<gate name=".2" symbol="BUF-SCHMITT-TRIGGER" x="2.54" y="0"/>
+<gate name=".3" symbol="BUF-SCHMITT-TRIGGER" x="2.54" y="-12.7"/>
+<gate name=".PW" symbol="POW" x="25.4" y="2.54"/>
+</gates>
+<devices>
+<device name="" package="TSSOP-8">
+<connects>
+<connect gate=".1" pin="A" pad="1"/>
+<connect gate=".1" pin="Y" pad="7"/>
+<connect gate=".2" pin="A" pad="3"/>
+<connect gate=".2" pin="Y" pad="5"/>
+<connect gate=".3" pin="A" pad="6"/>
+<connect gate=".3" pin="Y" pad="2"/>
+<connect gate=".PW" pin="GND" pad="4"/>
+<connect gate=".PW" pin="VCC" pad="8"/>
 </connects>
 <technologies>
 <technology name=""/>

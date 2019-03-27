@@ -764,46 +764,82 @@
 </gates>
 <devices>
 <device name="0603" package="CHIPLED_0603">
+<connects>
+<connect gate="G$1" pin="AN" pad="A"/>
+<connect gate="G$1" pin="CA" pad="C"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>
 </device>
 <device name="0603_NOOUTLINE" package="CHIPLED_0603_NOOUTLINE">
+<connects>
+<connect gate="G$1" pin="AN" pad="A"/>
+<connect gate="G$1" pin="CA" pad="C"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>
 </device>
 <device name="0805" package="CHIPLED_0805">
+<connects>
+<connect gate="G$1" pin="AN" pad="A"/>
+<connect gate="G$1" pin="CA" pad="C"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>
 </device>
 <device name="0805_NOOUTLINE" package="CHIPLED_0805_NOOUTLINE">
+<connects>
+<connect gate="G$1" pin="AN" pad="A"/>
+<connect gate="G$1" pin="CA" pad="C"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>
 </device>
 <device name="1206" package="CHIPLED_1206">
+<connects>
+<connect gate="G$1" pin="AN" pad="A"/>
+<connect gate="G$1" pin="CA" pad="C"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>
 </device>
 <device name="EV45-21" package="EVERLIGHT_45-21">
+<connects>
+<connect gate="G$1" pin="AN" pad="A"/>
+<connect gate="G$1" pin="CA" pad="K"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>
 </device>
 <device name="PLCC2_REV" package="PLCC2_REVMOUNT">
+<connects>
+<connect gate="G$1" pin="AN" pad="A"/>
+<connect gate="G$1" pin="CA" pad="K"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>
 </device>
 <device name="XPE2" package="CREE_XLAMP_XPE2">
+<connects>
+<connect gate="G$1" pin="AN" pad="ANODE"/>
+<connect gate="G$1" pin="CA" pad="CATHODE"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>
 </device>
 <device name="XTE" package="CREE_XLAMP_XTE">
+<connects>
+<connect gate="G$1" pin="AN" pad="ANODE"/>
+<connect gate="G$1" pin="CA" pad="CATHODE"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>
