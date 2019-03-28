@@ -836,24 +836,24 @@
 <devicesets>
 <deviceset name="SH-6" prefix="J">
 <gates>
-<gate name="-1" symbol="K" x="0" y="7.62"/>
-<gate name="-2" symbol="K" x="0" y="5.08"/>
-<gate name="-3" symbol="K" x="0" y="2.54"/>
-<gate name="-4" symbol="K" x="0" y="0"/>
-<gate name="-5" symbol="K" x="0" y="-2.54"/>
-<gate name="-6" symbol="K" x="0" y="-5.08"/>
-<gate name="-CASE" symbol="K" x="0" y="-10.16"/>
+<gate name=".1" symbol="K" x="0" y="7.62"/>
+<gate name=".2" symbol="K" x="0" y="5.08"/>
+<gate name=".3" symbol="K" x="0" y="2.54"/>
+<gate name=".4" symbol="K" x="0" y="0"/>
+<gate name=".5" symbol="K" x="0" y="-2.54"/>
+<gate name=".6" symbol="K" x="0" y="-5.08"/>
+<gate name=".TAB" symbol="K" x="0" y="-10.16"/>
 </gates>
 <devices>
 <device name="" package="SM06B-SSR-H-TB">
 <connects>
-<connect gate="-1" pin="S" pad="1"/>
-<connect gate="-2" pin="S" pad="2"/>
-<connect gate="-3" pin="S" pad="3"/>
-<connect gate="-4" pin="S" pad="4"/>
-<connect gate="-5" pin="S" pad="5"/>
-<connect gate="-6" pin="S" pad="6"/>
-<connect gate="-CASE" pin="S" pad="FIT@1 FIT@2"/>
+<connect gate=".1" pin="S" pad="1"/>
+<connect gate=".2" pin="S" pad="2"/>
+<connect gate=".3" pin="S" pad="3"/>
+<connect gate=".4" pin="S" pad="4"/>
+<connect gate=".5" pin="S" pad="5"/>
+<connect gate=".6" pin="S" pad="6"/>
+<connect gate=".TAB" pin="S" pad="FIT@1 FIT@2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -861,13 +861,13 @@
 </device>
 <device name="SIDE" package="SM06B-SRSS-TB">
 <connects>
-<connect gate="-1" pin="S" pad="1"/>
-<connect gate="-2" pin="S" pad="2"/>
-<connect gate="-3" pin="S" pad="3"/>
-<connect gate="-4" pin="S" pad="4"/>
-<connect gate="-5" pin="S" pad="5"/>
-<connect gate="-6" pin="S" pad="6"/>
-<connect gate="-CASE" pin="S" pad="FIT@1 FIT@2"/>
+<connect gate=".1" pin="S" pad="1"/>
+<connect gate=".2" pin="S" pad="2"/>
+<connect gate=".3" pin="S" pad="3"/>
+<connect gate=".4" pin="S" pad="4"/>
+<connect gate=".5" pin="S" pad="5"/>
+<connect gate=".6" pin="S" pad="6"/>
+<connect gate=".TAB" pin="S" pad="FIT@1 FIT@2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -877,22 +877,22 @@
 </deviceset>
 <deviceset name="SH-5" prefix="J">
 <gates>
-<gate name="-1" symbol="K" x="0" y="7.62"/>
-<gate name="-2" symbol="K" x="0" y="5.08"/>
-<gate name="-3" symbol="K" x="0" y="2.54"/>
-<gate name="-4" symbol="K" x="0" y="0"/>
-<gate name="-5" symbol="K" x="0" y="-2.54"/>
-<gate name="-CASE" symbol="K" x="0" y="-7.62"/>
+<gate name=".1" symbol="K" x="0" y="7.62"/>
+<gate name=".2" symbol="K" x="0" y="5.08"/>
+<gate name=".3" symbol="K" x="0" y="2.54"/>
+<gate name=".4" symbol="K" x="0" y="0"/>
+<gate name=".6" symbol="K" x="0" y="-2.54"/>
+<gate name=".TAB" symbol="K" x="0" y="-7.62"/>
 </gates>
 <devices>
 <device name="" package="SM05B-SSR-H-TB">
 <connects>
-<connect gate="-1" pin="S" pad="1"/>
-<connect gate="-2" pin="S" pad="2"/>
-<connect gate="-3" pin="S" pad="3"/>
-<connect gate="-4" pin="S" pad="4"/>
-<connect gate="-5" pin="S" pad="5"/>
-<connect gate="-CASE" pin="S" pad="FIT@1 FIT@2"/>
+<connect gate=".1" pin="S" pad="1"/>
+<connect gate=".2" pin="S" pad="2"/>
+<connect gate=".3" pin="S" pad="3"/>
+<connect gate=".4" pin="S" pad="4"/>
+<connect gate=".6" pin="S" pad="5"/>
+<connect gate=".TAB" pin="S" pad="FIT@1 FIT@2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -902,20 +902,20 @@
 </deviceset>
 <deviceset name="SH-4" prefix="J">
 <gates>
-<gate name="-1" symbol="K" x="0" y="7.62"/>
-<gate name="-2" symbol="K" x="0" y="5.08"/>
-<gate name="-3" symbol="K" x="0" y="2.54"/>
-<gate name="-4" symbol="K" x="0" y="0"/>
-<gate name="-CASE" symbol="K" x="0" y="-5.08"/>
+<gate name=".1" symbol="K" x="0" y="7.62"/>
+<gate name=".2" symbol="K" x="0" y="5.08"/>
+<gate name=".3" symbol="K" x="0" y="2.54"/>
+<gate name=".4" symbol="K" x="0" y="0"/>
+<gate name=".TAB" symbol="K" x="0" y="-5.08"/>
 </gates>
 <devices>
 <device name="" package="SM04B-SSR-H-TB">
 <connects>
-<connect gate="-1" pin="S" pad="1"/>
-<connect gate="-2" pin="S" pad="2"/>
-<connect gate="-3" pin="S" pad="3"/>
-<connect gate="-4" pin="S" pad="4"/>
-<connect gate="-CASE" pin="S" pad="FIT@1 FIT@2"/>
+<connect gate=".1" pin="S" pad="1"/>
+<connect gate=".2" pin="S" pad="2"/>
+<connect gate=".3" pin="S" pad="3"/>
+<connect gate=".4" pin="S" pad="4"/>
+<connect gate=".TAB" pin="S" pad="FIT@1 FIT@2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -925,18 +925,18 @@
 </deviceset>
 <deviceset name="SH-3" prefix="J">
 <gates>
-<gate name="-1" symbol="K" x="0" y="7.62"/>
-<gate name="-2" symbol="K" x="0" y="5.08"/>
-<gate name="-3" symbol="K" x="0" y="2.54"/>
-<gate name="-CASE" symbol="K" x="0" y="-2.54"/>
+<gate name=".1" symbol="K" x="0" y="7.62"/>
+<gate name=".2" symbol="K" x="0" y="5.08"/>
+<gate name=".3" symbol="K" x="0" y="2.54"/>
+<gate name=".TAB" symbol="K" x="0" y="-2.54"/>
 </gates>
 <devices>
 <device name="" package="SM03B-SSR-H-TB">
 <connects>
-<connect gate="-1" pin="S" pad="1"/>
-<connect gate="-2" pin="S" pad="2"/>
-<connect gate="-3" pin="S" pad="3"/>
-<connect gate="-CASE" pin="S" pad="FIT@1 FIT@2"/>
+<connect gate=".1" pin="S" pad="1"/>
+<connect gate=".2" pin="S" pad="2"/>
+<connect gate=".3" pin="S" pad="3"/>
+<connect gate=".TAB" pin="S" pad="FIT@1 FIT@2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -946,16 +946,16 @@
 </deviceset>
 <deviceset name="SH-2" prefix="J">
 <gates>
-<gate name="-1" symbol="K" x="0" y="7.62"/>
-<gate name="-2" symbol="K" x="0" y="5.08"/>
-<gate name="-CASE" symbol="K" x="0" y="0"/>
+<gate name=".1" symbol="K" x="0" y="7.62"/>
+<gate name=".2" symbol="K" x="0" y="5.08"/>
+<gate name=".TAB" symbol="K" x="0" y="0"/>
 </gates>
 <devices>
 <device name="" package="SM02B-SSR-H-TB">
 <connects>
-<connect gate="-1" pin="S" pad="1"/>
-<connect gate="-2" pin="S" pad="2"/>
-<connect gate="-CASE" pin="S" pad="FIT@1 FIT@2"/>
+<connect gate=".1" pin="S" pad="1"/>
+<connect gate=".2" pin="S" pad="2"/>
+<connect gate=".TAB" pin="S" pad="FIT@1 FIT@2"/>
 </connects>
 <technologies>
 <technology name=""/>

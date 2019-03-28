@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -52,7 +52,7 @@
 <layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
-<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
@@ -222,6 +222,38 @@
 <wire x1="7.75" y1="-4.45" x2="7.75" y2="11.5" width="0.127" layer="21"/>
 <wire x1="-7.75" y1="-4.45" x2="7.75" y2="-4.45" width="0.127" layer="21"/>
 </package>
+<package name="F20F-10DP-1V">
+<smd name="1" x="-2" y="2.8" dx="1.6" dy="0.6" layer="1" rot="R90"/>
+<smd name="2" x="-2" y="-2.8" dx="1.6" dy="0.6" layer="1" rot="R270"/>
+<smd name="3" x="-1" y="2.8" dx="1.6" dy="0.6" layer="1" rot="R90"/>
+<smd name="4" x="-1" y="-2.8" dx="1.6" dy="0.6" layer="1" rot="R270"/>
+<smd name="5" x="0" y="2.8" dx="1.6" dy="0.6" layer="1" rot="R90"/>
+<smd name="6" x="0" y="-2.8" dx="1.6" dy="0.6" layer="1" rot="R270"/>
+<smd name="7" x="1" y="2.8" dx="1.6" dy="0.6" layer="1" rot="R90"/>
+<smd name="8" x="1" y="-2.8" dx="1.6" dy="0.6" layer="1" rot="R270"/>
+<smd name="9" x="2" y="2.8" dx="1.6" dy="0.6" layer="1" rot="R90"/>
+<smd name="10" x="2" y="-2.8" dx="1.6" dy="0.6" layer="1" rot="R270"/>
+<hole x="-2.85" y="-2.005" drill="0.7"/>
+<hole x="2.85" y="-2.005" drill="0.7"/>
+<smd name="TAB1" x="-3.275" y="0.4" dx="1.8" dy="0.85" layer="1" rot="R90"/>
+<smd name="TAB2" x="3.275" y="0.4" dx="1.8" dy="0.85" layer="1" rot="R90"/>
+<wire x1="-3.65" y1="2.7" x2="3.65" y2="2.7" width="0.127" layer="21"/>
+<wire x1="-3.65" y1="2.7" x2="-3.65" y2="-2" width="0.127" layer="21"/>
+<wire x1="-2.95" y1="-2.7" x2="2.95" y2="-2.7" width="0.127" layer="21"/>
+<polygon width="0.127" layer="21">
+<vertex x="-2" y="1.8"/>
+<vertex x="-2.4" y="1"/>
+<vertex x="-1.6" y="1"/>
+</polygon>
+<wire x1="3.65" y1="-2" x2="3.65" y2="2.7" width="0.127" layer="21"/>
+<wire x1="-3.65" y1="-2" x2="-2.95" y2="-2.7" width="0.127" layer="21"/>
+<wire x1="3.65" y1="-2" x2="2.95" y2="-2.7" width="0.127" layer="21"/>
+<text x="-3" y="-5" size="0.8" layer="21" font="vector" ratio="15">&gt;NAME</text>
+</package>
+<package name="9.52P">
+<pad name="P$1" x="-4.76" y="0" drill="1.5" diameter="4.5"/>
+<pad name="P$2" x="4.76" y="0" drill="1.5" diameter="4.5"/>
+</package>
 </packages>
 <symbols>
 <symbol name="K">
@@ -233,14 +265,14 @@
 <devicesets>
 <deviceset name="2EDG-2P" prefix="J">
 <gates>
-<gate name="-1" symbol="K" x="0" y="2.54"/>
-<gate name="-2" symbol="K" x="0" y="0"/>
+<gate name=".1" symbol="K" x="0" y="2.54"/>
+<gate name=".2" symbol="K" x="0" y="0"/>
 </gates>
 <devices>
 <device name="" package="2EDG-2P">
 <connects>
-<connect gate="-1" pin="S" pad="P$1"/>
-<connect gate="-2" pin="S" pad="P$2"/>
+<connect gate=".1" pin="S" pad="P$1"/>
+<connect gate=".2" pin="S" pad="P$2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -250,17 +282,63 @@
 </deviceset>
 <deviceset name="PCC-SMP" prefix="J">
 <gates>
-<gate name="-T+" symbol="K" x="-2.54" y="2.54"/>
-<gate name="-T-" symbol="K" x="-2.54" y="0"/>
-<gate name="-BAR" symbol="K" x="-2.54" y="-2.54"/>
+<gate name=".T+" symbol="K" x="-2.54" y="2.54"/>
+<gate name=".T-" symbol="K" x="-2.54" y="0"/>
+<gate name=".BAR" symbol="K" x="-2.54" y="-2.54"/>
 </gates>
 <devices>
 <device name="" package="PCC-SMP">
 <connects>
-<connect gate="-BAR" pin="S" pad="3-BAR 4-BAR"/>
-<connect gate="-T+" pin="S" pad="1-T+"/>
-<connect gate="-T-" pin="S" pad="2-T-"/>
+<connect gate=".BAR" pin="S" pad="3-BAR 4-BAR"/>
+<connect gate=".T+" pin="S" pad="1-T+"/>
+<connect gate=".T-" pin="S" pad="2-T-"/>
 </connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="F20F-10DP-1V" prefix="J">
+<gates>
+<gate name=".1" symbol="K" x="-7.62" y="5.08"/>
+<gate name=".2" symbol="K" x="5.08" y="5.08"/>
+<gate name=".3" symbol="K" x="-7.62" y="2.54"/>
+<gate name=".4" symbol="K" x="5.08" y="2.54"/>
+<gate name=".5" symbol="K" x="-7.62" y="0"/>
+<gate name=".6" symbol="K" x="5.08" y="0"/>
+<gate name=".7" symbol="K" x="-7.62" y="-2.54"/>
+<gate name=".8" symbol="K" x="5.08" y="-2.54"/>
+<gate name=".9" symbol="K" x="-7.62" y="-5.08"/>
+<gate name=".10" symbol="K" x="5.08" y="-5.08"/>
+<gate name=".TAB" symbol="K" x="-7.62" y="-10.16"/>
+</gates>
+<devices>
+<device name="" package="F20F-10DP-1V">
+<connects>
+<connect gate=".1" pin="S" pad="1"/>
+<connect gate=".10" pin="S" pad="10"/>
+<connect gate=".2" pin="S" pad="2"/>
+<connect gate=".3" pin="S" pad="3"/>
+<connect gate=".4" pin="S" pad="4"/>
+<connect gate=".5" pin="S" pad="5"/>
+<connect gate=".6" pin="S" pad="6"/>
+<connect gate=".7" pin="S" pad="7"/>
+<connect gate=".8" pin="S" pad="8"/>
+<connect gate=".9" pin="S" pad="9"/>
+<connect gate=".TAB" pin="S" pad="TAB1 TAB2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="9.52P">
+<gates>
+</gates>
+<devices>
+<device name="">
 <technologies>
 <technology name=""/>
 </technologies>
