@@ -199,6 +199,33 @@
 <smd name="7" x="-0.635" y="2.7" dx="0.6" dy="1.8" layer="1" rot="R180"/>
 <smd name="8" x="-1.905" y="2.7" dx="0.6" dy="1.8" layer="1" rot="R180"/>
 </package>
+<package name="MSOP-8" urn="urn:adsk.eagle:footprint:4307/1" locally_modified="yes">
+<description>&lt;b&gt;8M, 8-Lead, 0.118" Wide, Miniature Small Outline Package&lt;/b&gt;&lt;p&gt;
+MSOP&lt;br&gt;
+8M-Package doc1097.pdf</description>
+<wire x1="1.5" y1="-1.5" x2="-1.5" y2="-1.5" width="0.1524" layer="21"/>
+<wire x1="-1.5" y1="1.5" x2="1.5" y2="1.5" width="0.1524" layer="21"/>
+<wire x1="-1.5" y1="1.5" x2="-1.5" y2="-1.5" width="0.1524" layer="21"/>
+<wire x1="1.5" y1="-1.5" x2="1.5" y2="1.5" width="0.1524" layer="21"/>
+<smd name="1" x="-0.975" y="-2.25" dx="0.4" dy="1.1" layer="1"/>
+<smd name="2" x="-0.325" y="-2.25" dx="0.4" dy="1.1" layer="1"/>
+<smd name="3" x="0.325" y="-2.25" dx="0.4" dy="1.1" layer="1"/>
+<smd name="4" x="0.975" y="-2.25" dx="0.4" dy="1.1" layer="1"/>
+<smd name="5" x="0.975" y="2.25" dx="0.4" dy="1.1" layer="1"/>
+<smd name="6" x="0.325" y="2.25" dx="0.4" dy="1.1" layer="1"/>
+<smd name="7" x="-0.325" y="2.25" dx="0.4" dy="1.1" layer="1"/>
+<smd name="8" x="-0.975" y="2.25" dx="0.4" dy="1.1" layer="1"/>
+<text x="-1.8825" y="-2.484" size="1.27" layer="25" ratio="10" rot="R90">&gt;NAME</text>
+<rectangle x1="-1.175" y1="-2.45" x2="-0.775" y2="-1.55" layer="51"/>
+<rectangle x1="-0.525" y1="-2.45" x2="-0.125" y2="-1.55" layer="51"/>
+<rectangle x1="0.125" y1="-2.45" x2="0.525" y2="-1.55" layer="51"/>
+<rectangle x1="0.775" y1="-2.45" x2="1.175" y2="-1.55" layer="51"/>
+<rectangle x1="0.775" y1="1.55" x2="1.175" y2="2.45" layer="51"/>
+<rectangle x1="0.125" y1="1.55" x2="0.525" y2="2.45" layer="51"/>
+<rectangle x1="-0.525" y1="1.55" x2="-0.125" y2="2.45" layer="51"/>
+<rectangle x1="-1.175" y1="1.55" x2="-0.775" y2="2.45" layer="51"/>
+<circle x="-0.958" y="-0.951" radius="0.254" width="0" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="AD8211">
@@ -278,7 +305,39 @@
 </device>
 </devices>
 </deviceset>
+<deviceset name="AD8418A" prefix="U">
+<gates>
+<gate name="_" symbol="AD8418" x="0" y="0"/>
+<gate name="-GND" symbol="POW" x="-7.62" y="-12.7"/>
+<gate name="-VREF2" symbol="POW" x="-2.54" y="-12.7"/>
+<gate name="-VDD" symbol="POW" x="-10.16" y="10.16"/>
+<gate name="-VREF1" symbol="POW" x="-5.08" y="10.16"/>
+</gates>
+<devices>
+<device name="" package="MSOP-8">
+<connects>
+<connect gate="-GND" pin="P$1" pad="2"/>
+<connect gate="-VDD" pin="P$1" pad="6"/>
+<connect gate="-VREF1" pin="P$1" pad="7"/>
+<connect gate="-VREF2" pin="P$1" pad="3"/>
+<connect gate="_" pin="IN+@8" pad="8"/>
+<connect gate="_" pin="IN-@1" pad="1"/>
+<connect gate="_" pin="O@5" pad="5"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </drawing>
+<compatibility>
+<note version="8.3" severity="warning">
+Since Version 8.3, EAGLE supports URNs for individual library
+assets (packages, symbols, and devices). The URNs of those assets
+will not be understood (or retained) with this version.
+</note>
+</compatibility>
 </eagle>
