@@ -463,7 +463,7 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="AGND">
+<deviceset name="AGND" prefix="GND">
 <description>&lt;b&gt;Analog Ground Symbol&lt;/b&gt;
 &lt;p&gt;Generic symbol for a analog ground supply.&lt;/p&gt;</description>
 <gates>
@@ -547,7 +547,7 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="VCC-ISO">
+<deviceset name="VCC-ISO" prefix="SUPPLY">
 <description>&lt;h3&gt;Isolated power supply&lt;/h3&gt;
 &lt;p&gt;Generic symbol for an isolated power supply.&lt;/p&gt;</description>
 <gates>
@@ -561,7 +561,7 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="VCCA">
+<deviceset name="VCCA" prefix="SUPPLY">
 <description>&lt;h3&gt;Analog VCC Voltage Supply&lt;/h3&gt;
 &lt;p&gt;Generic analog supply symbol.&lt;/p&gt;</description>
 <gates>
@@ -603,7 +603,7 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="VDDA">
+<deviceset name="VDDA" prefix="SUPPLY">
 <description>&lt;h3&gt;VDD Analog Voltage Supply&lt;/h3&gt;
 &lt;p&gt;Generic analog supply symbol.&lt;/p&gt;</description>
 <gates>
@@ -700,7 +700,7 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="DCBUS">
+<deviceset name="DCBUS" prefix="SUPPLY">
 <gates>
 <gate name="G$1" symbol="DCBUS" x="0" y="0"/>
 </gates>

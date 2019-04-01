@@ -252,7 +252,7 @@ USB connector with shield pins connectable</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="USB-SHIELD">
+<deviceset name="USB-SHIELD" prefix="J">
 <gates>
 <gate name="USB" symbol="USBSHIELD" x="-2.54" y="0"/>
 </gates>

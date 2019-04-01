@@ -473,6 +473,25 @@
 </device>
 </devices>
 </deviceset>
+<deviceset name="74LVC1G17" prefix="U">
+<gates>
+<gate name=".1" symbol="BUF-SCHMITT-TRIGGER" x="0" y="0"/>
+<gate name=".PW" symbol="POW" x="17.78" y="2.54"/>
+</gates>
+<devices>
+<device name="" package="SC-70-5">
+<connects>
+<connect gate=".1" pin="A" pad="2"/>
+<connect gate=".1" pin="Y" pad="4"/>
+<connect gate=".PW" pin="GND" pad="3"/>
+<connect gate=".PW" pin="VCC" pad="5"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </drawing>
