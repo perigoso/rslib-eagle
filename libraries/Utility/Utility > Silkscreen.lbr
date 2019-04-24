@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.3.0">
+<eagle version="9.3.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -64,6 +64,7 @@
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
 <layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
 <layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
+<layer number="58" name="bCAD" color="11" fill="1" visible="no" active="no"/>
 <layer number="59" name="tCarbon" color="7" fill="1" visible="no" active="no"/>
 <layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
 <layer number="88" name="SimResults" color="9" fill="1" visible="yes" active="yes"/>
@@ -8462,7 +8463,7 @@
 </polygon>
 </package>
 <package name="RAFAEL_SILVA_5MM_ALT_3">
-<polygon width="0" layer="41">
+<polygon width="0" layer="21">
 <vertex x="1.13405" y="0.257590625"/>
 <vertex x="0.78621875" y="0.437690625"/>
 <vertex x="1.17165" y="0.74905"/>
@@ -8492,7 +8493,7 @@
 <vertex x="1.71881875" y="0.2709"/>
 <vertex x="1.489759375" y="0.09293125"/>
 </polygon>
-<polygon width="0" layer="41">
+<polygon width="0" layer="21">
 <vertex x="-0.40475" y="-0.22151875"/>
 <vertex x="-0.77166875" y="-0.04578125"/>
 <vertex x="-0.754459375" y="-0.3092"/>
@@ -8524,7 +8525,7 @@
 <vertex x="0.31965" y="-0.594840625"/>
 <vertex x="-0.04201875" y="-0.40716875"/>
 </polygon>
-<polygon width="0" layer="41">
+<polygon width="0" layer="21">
 <vertex x="-0.34661875" y="-0.02075"/>
 <vertex x="-0.68536875" y="0.16061875"/>
 <vertex x="-0.3426" y="0.45153125"/>
@@ -8555,13 +8556,13 @@
 <vertex x="0.33518125" y="-0.375609375"/>
 <vertex x="-0.005990625" y="-0.19863125"/>
 </polygon>
-<polygon width="0" layer="41">
+<polygon width="0" layer="21">
 <vertex x="3.3925" y="-1.702340625"/>
 <vertex x="3.14901875" y="-1.702340625"/>
 <vertex x="3.14901875" y="2.31503125"/>
 <vertex x="3.3925" y="2.31503125"/>
 </polygon>
-<polygon width="0" layer="41">
+<polygon width="0" layer="21">
 <vertex x="4.219909375" y="2.26633125"/>
 <vertex x="3.66031875" y="2.26633125"/>
 <vertex x="3.66033125" y="1.86205"/>
@@ -8605,7 +8606,7 @@
 <vertex x="4.86583125" y="2.24966875"/>
 <vertex x="4.54336875" y="2.265909375"/>
 </polygon>
-<polygon width="0" layer="41">
+<polygon width="0" layer="21">
 <vertex x="4.285040625" y="0.70135"/>
 <vertex x="4.272859375" y="0.39968125"/>
 <vertex x="4.36246875" y="0.11561875"/>
@@ -8640,7 +8641,7 @@
 <vertex x="4.610140625" y="1.11953125"/>
 <vertex x="4.4173" y="0.97236875"/>
 </polygon>
-<polygon width="0" layer="41">
+<polygon width="0" layer="21">
 <vertex x="4.55801875" y="-0.80721875"/>
 <vertex x="4.53501875" y="-0.88066875"/>
 <vertex x="4.83156875" y="-1.119409375"/>
@@ -8654,6 +8655,10 @@
 <vertex x="4.707740625" y="-0.79738125"/>
 <vertex x="4.603559375" y="-0.73655"/>
 </polygon>
+</package>
+<package name="DESIGNEDINPT">
+<text x="-7.62" y="0.635" size="1" layer="21" font="vector" ratio="15">Designed in</text>
+<text x="0.635" y="0" size="1.8" layer="21" font="vector" ratio="15">Portugal</text>
 </package>
 </packages>
 <symbols>
@@ -13874,6 +13879,14 @@ logo</text>
 <wire x1="10.16" y1="5.08" x2="10.16" y2="0" width="0.254" layer="94"/>
 <wire x1="10.16" y1="0" x2="0" y2="0" width="0.254" layer="94"/>
 </symbol>
+<symbol name="DESIGNEDINPT">
+<text x="1.27" y="1.016" size="1.27" layer="94">Designed in
+Portugal</text>
+<wire x1="0" y1="0" x2="0" y2="5.08" width="0.254" layer="94"/>
+<wire x1="0" y1="5.08" x2="12.7" y2="5.08" width="0.254" layer="94"/>
+<wire x1="12.7" y1="5.08" x2="12.7" y2="0" width="0.254" layer="94"/>
+<wire x1="12.7" y1="0" x2="0" y2="0" width="0.254" layer="94"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="NO_PB_LOGO" prefix="LOGO">
@@ -13979,6 +13992,11 @@ logo</text>
 <technology name=""/>
 </technologies>
 </device>
+<device name="" package="RAFAEL_SILVA_5MM_ALT_3">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="ROHS_LOGO" prefix="LOGO">
@@ -14001,6 +14019,18 @@ logo</text>
 </gates>
 <devices>
 <device name="" package="ORANGEPI">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="DESIGNEDINPT" prefix="LOGO">
+<gates>
+<gate name="G$1" symbol="DESIGNEDINPT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="DESIGNEDINPT">
 <technologies>
 <technology name=""/>
 </technologies>
