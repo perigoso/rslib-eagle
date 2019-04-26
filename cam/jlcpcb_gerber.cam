@@ -1,7 +1,7 @@
 {
     "author": {
-        "email": "joao.silva@cec-dti.com",
-        "name": "Joao Silva"
+        "email": "silvagracarafael@gmail.com",
+        "name": "Rafael Silva"
     },
     "description": {
         "EN": "CAM job description goes here."
@@ -16,12 +16,19 @@
             "output_type": "drill",
             "outputs": [
                 {
+                    "advanced_options": {
+                        "mirror": false,
+                        "offset_x": 0,
+                        "offset_y": 0,
+                        "rotate": false,
+                        "upside_down": false
+                    },
                     "drills": {
                         "NPTH": true,
                         "PTH": true,
                         "VIA": true
                     },
-                    "filename_format": "%N.drd",
+                    "filename_format": "%N.xln",
                     "layers": {
                         "from": 1,
                         "to": 16
@@ -41,6 +48,13 @@
             "output_type": "gerber",
             "outputs": [
                 {
+                    "advanced_options": {
+                        "mirror": false,
+                        "offset_x": 0,
+                        "offset_y": 0,
+                        "rotate": false,
+                        "upside_down": false
+                    },
                     "board_outline": true,
                     "config": {
                         "description": "Board Outline",
@@ -65,10 +79,10 @@
                     },
                     "board_outline": false,
                     "config": {
-                        "description": "Component side",
+                        "description": "Copper",
                         "file_function": "Other"
                     },
-                    "filename_format": "%N.cmp",
+                    "filename_format": "%N.gtl",
                     "layers": [
                         1,
                         17,
@@ -89,10 +103,10 @@
                     },
                     "board_outline": false,
                     "config": {
-                        "description": "Silk screen CMP",
+                        "description": "Silkscreen",
                         "file_function": "Other"
                     },
-                    "filename_format": "%N.plc",
+                    "filename_format": "%N.gto",
                     "layers": [
                         21,
                         25,
@@ -113,10 +127,10 @@
                     },
                     "board_outline": false,
                     "config": {
-                        "description": "Solder stop mask CMP",
+                        "description": "Soldermask",
                         "file_function": "Other"
                     },
-                    "filename_format": "%N.stc",
+                    "filename_format": "%N.gts",
                     "layers": [
                         29
                     ],
@@ -135,10 +149,32 @@
                     },
                     "board_outline": false,
                     "config": {
-                        "description": "Solder side",
+                        "description": "Paste",
                         "file_function": "Other"
                     },
-                    "filename_format": "%N.sol",
+                    "filename_format": "%N.gtp",
+                    "layers": [
+                        31
+                    ],
+                    "milling": false,
+                    "name": "TOP Paste",
+                    "polarity": "positive",
+                    "type": "gerber_layer"
+                },
+                {
+                    "advanced_options": {
+                        "mirror": false,
+                        "offset_x": 0,
+                        "offset_y": 0,
+                        "rotate": false,
+                        "upside_down": false
+                    },
+                    "board_outline": false,
+                    "config": {
+                        "description": "Copper",
+                        "file_function": "Other"
+                    },
+                    "filename_format": "%N.gbl",
                     "layers": [
                         16,
                         17,
@@ -150,12 +186,19 @@
                     "type": "gerber_layer"
                 },
                 {
+                    "advanced_options": {
+                        "mirror": false,
+                        "offset_x": 0,
+                        "offset_y": 0,
+                        "rotate": false,
+                        "upside_down": false
+                    },
                     "board_outline": false,
                     "config": {
-                        "description": "Other",
+                        "description": "Silkscreen",
                         "file_function": "Other"
                     },
-                    "filename_format": "%N.pls",
+                    "filename_format": "%N.gbo",
                     "layers": [
                         22,
                         26,
@@ -176,10 +219,10 @@
                     },
                     "board_outline": false,
                     "config": {
-                        "description": "Solder stop mask SOL",
+                        "description": "Soldermask",
                         "file_function": "Other"
                     },
-                    "filename_format": "%N.sts",
+                    "filename_format": "%N.gbs",
                     "layers": [
                         30
                     ],
@@ -187,13 +230,41 @@
                     "name": "BOTTOM Solder mask",
                     "polarity": "positive",
                     "type": "gerber_layer"
+                },
+                {
+                    "advanced_options": {
+                        "mirror": false,
+                        "offset_x": 0,
+                        "offset_y": 0,
+                        "rotate": false,
+                        "upside_down": false
+                    },
+                    "board_outline": false,
+                    "config": {
+                        "description": "Paste",
+                        "file_function": "Other"
+                    },
+                    "filename_format": "%N.gbp",
+                    "layers": [
+                        32
+                    ],
+                    "milling": false,
+                    "name": "BOTTOM Paste",
+                    "polarity": "positive",
+                    "type": "gerber_layer"
                 }
             ],
             "version": "RS274X"
+        },
+        {
+            "filename_prefix": "CAMOutputs/DrawingFiles",
+            "output_type": "drawing",
+            "outputs": [
+            ]
         }
     ],
-    "timestamp": "2018-10-01T14:21:39",
+    "timestamp": "2019-04-11T23:29:01",
     "type": "EAGLE CAM job",
-    "units": "imperial",
+    "units": "metric",
     "version": "8.6.1"
 }
