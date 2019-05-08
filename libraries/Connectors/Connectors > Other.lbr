@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.3.0">
+<eagle version="9.3.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -147,6 +147,8 @@
 <layer number="229" name="229bmp" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="230" name="230bmp" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="231" name="231bmp" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="232" name="Eagle3D_PG2" color="7" fill="1" visible="no" active="no"/>
+<layer number="233" name="Eagle3D_PG3" color="7" fill="1" visible="no" active="no"/>
 <layer number="248" name="Housing" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="249" name="Edge" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="250" name="Descript" color="3" fill="1" visible="no" active="no"/>
@@ -317,6 +319,28 @@
 <text x="0" y="39.95" size="7" layer="21" font="vector" rot="R90" align="center">18650 3.7V</text>
 <text x="0" y="68.9" size="7" layer="21" font="vector" align="center">+</text>
 </package>
+<package name="PAD2X5MM-2P" urn="urn:adsk.eagle:footprint:30823/1" locally_modified="yes">
+<description>&lt;b&gt;SMD PAD&lt;/b&gt;</description>
+<smd name="1" x="-1.746" y="0" dx="2" dy="5" layer="1" cream="no"/>
+<text x="0.04" y="3.416" size="0.8" layer="25" font="vector" ratio="15" align="center">&gt;NAME</text>
+<smd name="2" x="1.746" y="0" dx="2" dy="5" layer="1" cream="no"/>
+<wire x1="-2.921" y1="2.667" x2="2.921" y2="2.667" width="0.127" layer="21"/>
+<wire x1="2.921" y1="2.667" x2="2.921" y2="-2.667" width="0.127" layer="21"/>
+<wire x1="2.921" y1="-2.667" x2="-2.921" y2="-2.667" width="0.127" layer="21"/>
+<wire x1="-2.921" y1="-2.667" x2="-2.921" y2="2.667" width="0.127" layer="21"/>
+<wire x1="0" y1="2.667" x2="0" y2="-2.667" width="0.127" layer="21"/>
+</package>
+<package name="PAD1X3_5MM-2P">
+<description>&lt;b&gt;SMD PAD&lt;/b&gt;</description>
+<smd name="1" x="-1.046" y="0" dx="1" dy="3.5" layer="1" cream="no"/>
+<text x="0.04" y="2.816" size="0.8" layer="25" font="vector" ratio="15" align="center">&gt;NAME</text>
+<smd name="2" x="1.046" y="0" dx="1" dy="3.5" layer="1" cream="no"/>
+<wire x1="-1.721" y1="1.967" x2="1.721" y2="1.967" width="0.127" layer="21"/>
+<wire x1="1.721" y1="1.967" x2="1.721" y2="-1.967" width="0.127" layer="21"/>
+<wire x1="1.721" y1="-1.967" x2="-1.721" y2="-1.967" width="0.127" layer="21"/>
+<wire x1="-1.721" y1="-1.967" x2="-1.721" y2="1.967" width="0.127" layer="21"/>
+<wire x1="0" y1="1.967" x2="0" y2="-1.967" width="0.127" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="K">
@@ -474,7 +498,40 @@
 </device>
 </devices>
 </deviceset>
+<deviceset name="2P-PAD" prefix="P">
+<gates>
+<gate name=".1" symbol="K" x="0" y="2.54"/>
+<gate name=".2" symbol="K" x="0" y="-2.54"/>
+</gates>
+<devices>
+<device name="_1X3.5" package="PAD1X3_5MM-2P">
+<connects>
+<connect gate=".1" pin="S" pad="1"/>
+<connect gate=".2" pin="S" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="_2X5" package="PAD2X5MM-2P">
+<connects>
+<connect gate=".1" pin="S" pad="1"/>
+<connect gate=".2" pin="S" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </drawing>
+<compatibility>
+<note version="8.3" severity="warning">
+Since Version 8.3, EAGLE supports URNs for individual library
+assets (packages, symbols, and devices). The URNs of those assets
+will not be understood (or retained) with this version.
+</note>
+</compatibility>
 </eagle>
