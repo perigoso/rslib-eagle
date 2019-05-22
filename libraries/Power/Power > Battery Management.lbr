@@ -191,12 +191,12 @@
 </package>
 <package name="DFN2030-6">
 <smd name="EP" x="0" y="0" dx="1.8" dy="1.9" layer="1"/>
-<smd name="P$1" x="-1.6" y="0.6" dx="1" dy="0.75" layer="1" rot="R180"/>
-<smd name="P$2" x="1.6" y="0.6" dx="1" dy="0.75" layer="1" rot="R180"/>
-<smd name="P$3" x="1.6" y="-0.175" dx="1" dy="0.4" layer="1" rot="R180"/>
-<smd name="P$4" x="1.6" y="-0.775" dx="1" dy="0.4" layer="1" rot="R180"/>
-<smd name="P$5" x="-1.6" y="-0.175" dx="1" dy="0.4" layer="1" rot="R180"/>
-<smd name="P$6" x="-1.6" y="-0.775" dx="1" dy="0.4" layer="1" rot="R180"/>
+<smd name="1" x="-1.6" y="0.6" dx="1" dy="0.75" layer="1" rot="R180"/>
+<smd name="6" x="1.6" y="0.6" dx="1" dy="0.75" layer="1" rot="R180"/>
+<smd name="5" x="1.6" y="-0.175" dx="1" dy="0.4" layer="1" rot="R180"/>
+<smd name="4" x="1.6" y="-0.775" dx="1" dy="0.4" layer="1" rot="R180"/>
+<smd name="2" x="-1.6" y="-0.175" dx="1" dy="0.4" layer="1" rot="R180"/>
+<smd name="3" x="-1.6" y="-0.775" dx="1" dy="0.4" layer="1" rot="R180"/>
 <wire x1="-1.55" y1="1.05" x2="1.55" y2="1.05" width="0.127" layer="21"/>
 <wire x1="1.55" y1="1.05" x2="1.55" y2="-1.05" width="0.127" layer="21"/>
 <wire x1="1.55" y1="-1.05" x2="-1.55" y2="-1.05" width="0.127" layer="21"/>
@@ -337,11 +337,11 @@ external MOSFET switch.</description>
 <devices>
 <device name="" package="DFN2030-6">
 <connects>
-<connect gate="G$1" pin="S1@1" pad="P$1"/>
-<connect gate="G$1" pin="S2@6" pad="P$6"/>
-<connect gate="G$1" pin="VDD@3" pad="P$3"/>
-<connect gate="G$1" pin="VM@5" pad="P$5"/>
-<connect gate="G$1" pin="VSS@2" pad="P$2"/>
+<connect gate="G$1" pin="S1@1" pad="1"/>
+<connect gate="G$1" pin="S2@6" pad="6"/>
+<connect gate="G$1" pin="VDD@3" pad="3"/>
+<connect gate="G$1" pin="VM@5" pad="5"/>
+<connect gate="G$1" pin="VSS@2" pad="2"/>
 </connects>
 <technologies>
 <technology name=""/>
