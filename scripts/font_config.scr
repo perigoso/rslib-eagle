@@ -1,3 +1,7 @@
+# Font Configuration Script
+# Author: Rafael Silva
+# https://github.com/gimbas/rslib
+
 display torig borig;
 group all;
 smash (C>0 0);
