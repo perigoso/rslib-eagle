@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.3.2">
+<eagle version="9.5.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -305,6 +305,39 @@
 <wire x1="4.32" y1="7.051" x2="4.32" y2="6.001" width="0.65" layer="46"/>
 <wire x1="-4.32" y1="1.821" x2="-4.32" y2="2.871" width="0.65" layer="46"/>
 </package>
+<package name="USB-C-V">
+<pad name="A9" x="3.25" y="0.7" drill="0.4" diameter="0.6"/>
+<pad name="A6" x="-0.45" y="0.7" drill="0.4" diameter="0.6"/>
+<pad name="A5" x="-1.35" y="0.7" drill="0.4" diameter="0.6"/>
+<pad name="A4" x="-2.3" y="0.7" drill="0.4" diameter="0.6"/>
+<pad name="A1" x="-3.25" y="0.7" drill="0.4" diameter="0.6"/>
+<pad name="A8" x="2.3" y="0.7" drill="0.4" diameter="0.6"/>
+<pad name="A7" x="0.45" y="0.7" drill="0.4" diameter="0.6"/>
+<pad name="SHIELD0" x="2" y="1.93" drill="0.5" shape="long" rot="R180"/>
+<wire x1="1.458" y1="1.93" x2="2.508" y2="1.93" width="0.65" layer="46"/>
+<pad name="SHIELD1" x="-2" y="1.93" drill="0.5" shape="long" rot="R180"/>
+<wire x1="-2.479" y1="1.93" x2="-1.429" y2="1.93" width="0.65" layer="46"/>
+<pad name="SHIELD2" x="-2" y="-1.93" drill="0.5" shape="long" rot="R180"/>
+<wire x1="-2.479" y1="-1.93" x2="-1.429" y2="-1.93" width="0.65" layer="46"/>
+<pad name="SHIELD3" x="2" y="-1.93" drill="0.5" shape="long" rot="R180"/>
+<wire x1="1.458" y1="-1.93" x2="2.508" y2="-1.93" width="0.65" layer="46"/>
+<pad name="B12" x="-3.25" y="-0.7" drill="0.4" diameter="0.6" rot="R180"/>
+<pad name="B7" x="0.45" y="-0.7" drill="0.4" diameter="0.6" rot="R180"/>
+<pad name="B6" x="1.35" y="-0.7" drill="0.4" diameter="0.6" rot="R180"/>
+<pad name="B5" x="2.3" y="-0.7" drill="0.4" diameter="0.6" rot="R180"/>
+<pad name="B4" x="3.25" y="-0.7" drill="0.4" diameter="0.6" rot="R180"/>
+<pad name="B9" x="-2.3" y="-0.7" drill="0.4" diameter="0.6" rot="R180"/>
+<pad name="B8" x="-0.45" y="-0.7" drill="0.4" diameter="0.6" rot="R180"/>
+<wire x1="-2.9" y1="1.29" x2="2.9" y2="1.29" width="0.127" layer="21"/>
+<wire x1="2.9" y1="1.29" x2="4.17" y2="0.02" width="0.127" layer="21" curve="-90"/>
+<wire x1="4.17" y1="0.02" x2="4.17" y2="-0.02" width="0.127" layer="21"/>
+<wire x1="4.17" y1="-0.02" x2="2.9" y2="-1.29" width="0.127" layer="21" curve="-90"/>
+<wire x1="2.9" y1="-1.29" x2="-2.9" y2="-1.29" width="0.127" layer="21"/>
+<wire x1="-2.9" y1="-1.29" x2="-4.17" y2="-0.02" width="0.127" layer="21" curve="-90"/>
+<wire x1="-4.17" y1="-0.02" x2="-4.17" y2="0.02" width="0.127" layer="21"/>
+<wire x1="-4.17" y1="0.02" x2="-2.9" y2="1.29" width="0.127" layer="21" curve="-90"/>
+<text x="5.08" y="0" size="0.8" layer="21" font="vector" ratio="12" rot="R90" align="center">&gt;NAME</text>
+</package>
 </packages>
 <symbols>
 <symbol name="USB_B">
@@ -455,6 +488,22 @@ USB connector with shield pins connectable</description>
 <connect gate="G$1" pin="SBU2@B8" pad="B8"/>
 <connect gate="G$1" pin="SHIELD" pad="SHIELD0 SHIELD1 SHIELD2 SHIELD3"/>
 <connect gate="G$1" pin="VBUS@A4,A9,B9,B4" pad="A4/B9 B4/A9"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="VERTICAL" package="USB-C-V">
+<connects>
+<connect gate="G$1" pin="CC1@A5" pad="A5"/>
+<connect gate="G$1" pin="CC2@B5" pad="B5"/>
+<connect gate="G$1" pin="DN@A7,B7" pad="A7 B7"/>
+<connect gate="G$1" pin="DP@A6,B6" pad="A6 B6"/>
+<connect gate="G$1" pin="GND@A1,A12,B12,B1" pad="A1 B12"/>
+<connect gate="G$1" pin="SBU1@A8" pad="A8"/>
+<connect gate="G$1" pin="SBU2@B8" pad="B8"/>
+<connect gate="G$1" pin="SHIELD" pad="SHIELD0 SHIELD1 SHIELD2 SHIELD3"/>
+<connect gate="G$1" pin="VBUS@A4,A9,B9,B4" pad="A4 A9 B4 B9"/>
 </connects>
 <technologies>
 <technology name=""/>

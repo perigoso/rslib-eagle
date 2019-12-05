@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.0">
+<eagle version="9.5.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -71,7 +71,7 @@
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
-<layer number="93" name="Pins" color="2" fill="1" visible="no" active="yes"/>
+<layer number="93" name="Pins" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
@@ -355,21 +355,19 @@
 <wire x1="0.8128" y1="-1.4732" x2="0.8128" y2="1.4732" width="0.1524" layer="51"/>
 <wire x1="0.8128" y1="1.4732" x2="-0.8128" y2="1.4732" width="0.1524" layer="51"/>
 <wire x1="-0.8128" y1="1.4732" x2="-0.8128" y2="-1.4732" width="0.1524" layer="51"/>
-<text x="-2.00675" y="0.8382625" size="1.2701" layer="51" ratio="6" rot="SR0">*</text>
 <wire x1="-0.381" y1="-1.4732" x2="0.381" y2="-1.4732" width="0.1524" layer="21"/>
 <wire x1="0.381" y1="1.4732" x2="-0.381" y2="1.4732" width="0.1524" layer="21"/>
-<text x="-2.00846875" y="0.83898125" size="1.27118125" layer="21" ratio="6" rot="SR0">*</text>
-<text x="-4.623509375" y="1.9561" size="2.08311875" layer="25" ratio="10" rot="SR0">&gt;NAME</text>
-<text x="-5.62381875" y="-4.07155" size="2.08666875" layer="27" ratio="10" rot="SR0">&gt;VALUE</text>
+<text x="0" y="2.54" size="0.8" layer="25" font="vector" ratio="12" rot="SR0" align="center">&gt;NAME</text>
 <smd name="1" x="-1.1684" y="0.95" dx="1.2192" dy="0.6" layer="1"/>
 <smd name="2" x="-1.1684" y="0" dx="1.2192" dy="0.6" layer="1"/>
 <smd name="3" x="-1.1684" y="-0.95" dx="1.2192" dy="0.6" layer="1"/>
 <smd name="4" x="1.1684" y="-0.95" dx="1.2192" dy="0.6" layer="1"/>
 <smd name="5" x="1.1684" y="0" dx="1.2192" dy="0.6" layer="1"/>
 <smd name="6" x="1.1684" y="0.95" dx="1.2192" dy="0.6" layer="1"/>
+<circle x="-1.524" y="1.778" radius="0.1" width="0.2" layer="21"/>
 </package>
 <package name="DFN10">
-<smd name="1" x="-1.25" y="1" dx="0.6" dy="0.25" layer="1"/>
+<smd name="1" x="-1.25" y="1" dx="0.7" dy="0.25" layer="1"/>
 <text x="-3.048" y="3.048" size="1.27" layer="25">&gt;NAME</text>
 <circle x="-1.606" y="1.656" radius="0.2032" width="0" layer="21"/>
 <smd name="11" x="0" y="0" dx="1.9" dy="1.2" layer="1" rot="R270"/>
@@ -377,15 +375,15 @@
 <wire x1="-1.25" y1="-1.25" x2="-1.25" y2="1.25" width="0.127" layer="51"/>
 <wire x1="-1.25" y1="1.25" x2="1.25" y2="1.25" width="0.127" layer="21"/>
 <wire x1="1.25" y1="-1.25" x2="-1.25" y2="-1.25" width="0.127" layer="21"/>
-<smd name="2" x="-1.25" y="0.5" dx="0.6" dy="0.25" layer="1"/>
-<smd name="3" x="-1.25" y="0" dx="0.6" dy="0.25" layer="1"/>
-<smd name="4" x="-1.25" y="-0.5" dx="0.6" dy="0.25" layer="1"/>
-<smd name="5" x="-1.25" y="-1" dx="0.6" dy="0.25" layer="1"/>
-<smd name="6" x="1.25" y="-1" dx="0.6" dy="0.25" layer="1" rot="R180"/>
-<smd name="7" x="1.25" y="-0.5" dx="0.6" dy="0.25" layer="1" rot="R180"/>
-<smd name="8" x="1.25" y="0" dx="0.6" dy="0.25" layer="1" rot="R180"/>
-<smd name="9" x="1.25" y="0.5" dx="0.6" dy="0.25" layer="1" rot="R180"/>
-<smd name="10" x="1.25" y="1" dx="0.6" dy="0.25" layer="1" rot="R180"/>
+<smd name="2" x="-1.25" y="0.5" dx="0.7" dy="0.25" layer="1"/>
+<smd name="3" x="-1.25" y="0" dx="0.7" dy="0.25" layer="1"/>
+<smd name="4" x="-1.25" y="-0.5" dx="0.7" dy="0.25" layer="1"/>
+<smd name="5" x="-1.25" y="-1" dx="0.7" dy="0.25" layer="1"/>
+<smd name="6" x="1.25" y="-1" dx="0.7" dy="0.25" layer="1" rot="R180"/>
+<smd name="7" x="1.25" y="-0.5" dx="0.7" dy="0.25" layer="1" rot="R180"/>
+<smd name="8" x="1.25" y="0" dx="0.7" dy="0.25" layer="1" rot="R180"/>
+<smd name="9" x="1.25" y="0.5" dx="0.7" dy="0.25" layer="1" rot="R180"/>
+<smd name="10" x="1.25" y="1" dx="0.7" dy="0.25" layer="1" rot="R180"/>
 </package>
 <package name="VQFN20">
 <wire x1="-1.5" y1="2" x2="1.5" y2="2" width="0.127" layer="51"/>
@@ -604,6 +602,25 @@
 <rectangle x1="0.1" y1="-1.1" x2="0.6" y2="-0.1" layer="31" rot="R180"/>
 <rectangle x1="-0.6" y1="-1.1" x2="-0.1" y2="-0.1" layer="31" rot="R180"/>
 <rectangle x1="0.1" y1="0.1" x2="0.6" y2="1.1" layer="31" rot="R180"/>
+</package>
+<package name="DFN10-2">
+<smd name="1" x="-1.25" y="1" dx="0.7" dy="0.25" layer="1"/>
+<text x="0" y="2.54" size="0.8" layer="25" font="vector" ratio="12" align="center">&gt;NAME</text>
+<circle x="-1.86" y="1.783" radius="0.2032" width="0" layer="21"/>
+<smd name="11" x="0" y="0" dx="2.2" dy="1.5" layer="1" rot="R270"/>
+<wire x1="1.5" y1="1.5" x2="1.5" y2="-1.5" width="0.127" layer="21"/>
+<wire x1="-1.5" y1="-1.5" x2="-1.5" y2="1.5" width="0.127" layer="21"/>
+<wire x1="-1.5" y1="1.5" x2="1.5" y2="1.5" width="0.127" layer="21"/>
+<wire x1="1.5" y1="-1.5" x2="-1.5" y2="-1.5" width="0.127" layer="21"/>
+<smd name="2" x="-1.25" y="0.5" dx="0.7" dy="0.25" layer="1"/>
+<smd name="3" x="-1.25" y="0" dx="0.7" dy="0.25" layer="1"/>
+<smd name="4" x="-1.25" y="-0.5" dx="0.7" dy="0.25" layer="1"/>
+<smd name="5" x="-1.25" y="-1" dx="0.7" dy="0.25" layer="1"/>
+<smd name="6" x="1.25" y="-1" dx="0.7" dy="0.25" layer="1" rot="R180"/>
+<smd name="7" x="1.25" y="-0.5" dx="0.7" dy="0.25" layer="1" rot="R180"/>
+<smd name="8" x="1.25" y="0" dx="0.7" dy="0.25" layer="1" rot="R180"/>
+<smd name="9" x="1.25" y="0.5" dx="0.7" dy="0.25" layer="1" rot="R180"/>
+<smd name="10" x="1.25" y="1" dx="0.7" dy="0.25" layer="1" rot="R180"/>
 </package>
 </packages>
 <symbols>
@@ -879,6 +896,39 @@
 <text x="-20.32" y="3.556" size="1.27" layer="95">&gt;NAME</text>
 <text x="-20.32" y="1.27" size="1.27" layer="96">&gt;VALUE</text>
 <pin name="SW" x="2.54" y="-2.54" length="short" rot="R180"/>
+</symbol>
+<symbol name="LT3757">
+<pin name="!SHDN!/UVLO" x="-12.7" y="12.7" length="short"/>
+<pin name="SYNC" x="-12.7" y="2.54" length="short"/>
+<pin name="RT" x="-12.7" y="-7.62" length="short"/>
+<pin name="SS" x="-12.7" y="-10.16" length="short"/>
+<pin name="VC" x="-12.7" y="-15.24" length="short"/>
+<pin name="GND" x="12.7" y="-15.24" length="short" rot="R180"/>
+<pin name="FB" x="12.7" y="-10.16" length="short" rot="R180"/>
+<pin name="SENSE" x="12.7" y="-7.62" length="short" rot="R180"/>
+<pin name="GATE" x="12.7" y="2.54" length="short" rot="R180"/>
+<pin name="INTVCC" x="12.7" y="10.16" length="short" rot="R180"/>
+<pin name="VIN" x="12.7" y="15.24" length="short" rot="R180"/>
+<wire x1="-10.16" y1="17.78" x2="10.16" y2="17.78" width="0.254" layer="94"/>
+<wire x1="10.16" y1="17.78" x2="10.16" y2="-17.78" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-17.78" x2="-10.16" y2="-17.78" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-17.78" x2="-10.16" y2="17.78" width="0.254" layer="94"/>
+<text x="0" y="0" size="1.27" layer="95" rot="R90" align="center">&gt;NAME</text>
+<text x="-10.16" y="-20.32" size="1.27" layer="96">&gt;VALUE</text>
+</symbol>
+<symbol name="MIC2619">
+<pin name="VIN" x="-10.16" y="2.54" length="short"/>
+<pin name="EN" x="-10.16" y="0" length="short"/>
+<pin name="GND" x="-10.16" y="-5.08" length="short"/>
+<pin name="SW" x="10.16" y="2.54" length="short" rot="R180"/>
+<pin name="OVP" x="10.16" y="0" length="short" rot="R180"/>
+<pin name="FB" x="10.16" y="-5.08" length="short" rot="R180"/>
+<wire x1="-7.62" y1="5.08" x2="7.62" y2="5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="5.08" x2="7.62" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-7.62" x2="-7.62" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-7.62" x2="-7.62" y2="5.08" width="0.254" layer="94"/>
+<text x="-7.62" y="7.62" size="1.27" layer="95" align="top-left">&gt;NAME</text>
+<text x="-7.62" y="-10.16" size="1.27" layer="96">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -1233,6 +1283,51 @@ disabled, forcing the converter to operate at a fixed switching frequency. It ca
 <connect gate="G$1" pin="SW" pad="4 9 10 11 12 SWPAD SWPAD1 SWPAD_VIA@0 SWPAD_VIA@1 SWPAD_VIA@2 SWPAD_VIA@3 SWPAD_VIA@4 SWPAD_VIA@5"/>
 <connect gate="G$1" pin="VDD" pad="28"/>
 <connect gate="G$1" pin="VIN" pad="27"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="LT3757" prefix="U">
+<gates>
+<gate name="G$1" symbol="LT3757" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="DFN10-2">
+<connects>
+<connect gate="G$1" pin="!SHDN!/UVLO" pad="9"/>
+<connect gate="G$1" pin="FB" pad="2"/>
+<connect gate="G$1" pin="GATE" pad="7"/>
+<connect gate="G$1" pin="GND" pad="11"/>
+<connect gate="G$1" pin="INTVCC" pad="8"/>
+<connect gate="G$1" pin="RT" pad="4"/>
+<connect gate="G$1" pin="SENSE" pad="6"/>
+<connect gate="G$1" pin="SS" pad="3"/>
+<connect gate="G$1" pin="SYNC" pad="5"/>
+<connect gate="G$1" pin="VC" pad="1"/>
+<connect gate="G$1" pin="VIN" pad="10"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="MIC2619" prefix="U">
+<gates>
+<gate name="G$1" symbol="MIC2619" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOT-23-6N">
+<connects>
+<connect gate="G$1" pin="EN" pad="4"/>
+<connect gate="G$1" pin="FB" pad="3"/>
+<connect gate="G$1" pin="GND" pad="2"/>
+<connect gate="G$1" pin="OVP" pad="5"/>
+<connect gate="G$1" pin="SW" pad="1"/>
+<connect gate="G$1" pin="VIN" pad="6"/>
 </connects>
 <technologies>
 <technology name=""/>

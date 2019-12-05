@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.3.2">
+<eagle version="9.5.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -419,6 +419,19 @@
 <rectangle x1="-0.633" y1="-0.383" x2="-0.383" y2="0.117" layer="51" rot="R270"/>
 <smd name="2" x="-0.508" y="-1.016" dx="0.6" dy="0.6" layer="1" rot="R270"/>
 </package>
+<package name="_1210">
+<wire x1="0.9525" y1="-1.2" x2="-0.9652" y2="-1.2" width="0.1016" layer="51"/>
+<wire x1="0.9525" y1="1.2" x2="-0.9652" y2="1.2" width="0.1016" layer="51"/>
+<wire x1="-2.567" y1="1.474" x2="2.567" y2="1.474" width="0.127" layer="21"/>
+<wire x1="2.567" y1="1.474" x2="2.567" y2="-1.474" width="0.127" layer="21"/>
+<wire x1="2.567" y1="-1.474" x2="-2.567" y2="-1.474" width="0.127" layer="21"/>
+<wire x1="-2.567" y1="-1.474" x2="-2.567" y2="1.474" width="0.127" layer="21"/>
+<rectangle x1="-1.6891" y1="-1.27" x2="-0.9525" y2="1.27" layer="51"/>
+<rectangle x1="0.9525" y1="-1.27" x2="1.6891" y2="1.27" layer="51"/>
+<smd name="1" x="-1.6" y="0" dx="1.52" dy="2.54" layer="1"/>
+<smd name="2" x="1.6" y="0" dx="1.52" dy="2.54" layer="1"/>
+<text x="-0.0225" y="2.1383" size="0.8" layer="25" font="vector" ratio="15" align="center">&gt;NAME</text>
+</package>
 </packages>
 <symbols>
 <symbol name="CAP_C">
@@ -584,6 +597,15 @@ temperature. Capacitance change is limited to ±15% from
 </technologies>
 </device>
 <device name="0805_NO" package="0805-NO">
+<connects>
+<connect gate="G$1" pin="P$1" pad="1"/>
+<connect gate="G$1" pin="P$2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="_1210" package="_1210">
 <connects>
 <connect gate="G$1" pin="P$1" pad="1"/>
 <connect gate="G$1" pin="P$2" pad="2"/>

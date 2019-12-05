@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.3.0">
+<eagle version="9.5.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -276,30 +276,62 @@
 <pad name="6" x="10.16" y="0" drill="1.1"/>
 </package>
 <package name="1X8_2.54">
-<pad name="1" x="-2.54" y="0" drill="1.1" shape="square"/>
-<pad name="2" x="0" y="0" drill="1.1"/>
-<pad name="3" x="2.54" y="0" drill="1.1"/>
-<wire x1="-3.81" y1="1.27" x2="16.51" y2="1.27" width="0.127" layer="21"/>
-<wire x1="16.51" y1="1.27" x2="16.51" y2="-1.27" width="0.127" layer="21"/>
-<wire x1="16.51" y1="-1.27" x2="-3.81" y2="-1.27" width="0.127" layer="21"/>
-<wire x1="-3.81" y1="-1.27" x2="-3.81" y2="1.27" width="0.127" layer="21"/>
-<text x="-3.81" y="-2.54" size="0.8" layer="21" font="vector" ratio="15">&gt;NAME</text>
-<pad name="4" x="5.08" y="0" drill="1.1"/>
-<pad name="5" x="7.62" y="0" drill="1.1"/>
-<pad name="6" x="10.16" y="0" drill="1.1"/>
-<pad name="7" x="12.7" y="0" drill="1.1"/>
-<pad name="8" x="15.24" y="0" drill="1.1"/>
+<pad name="1" x="-8.89" y="0" drill="1.1" shape="square"/>
+<pad name="2" x="-6.35" y="0" drill="1.1"/>
+<pad name="3" x="-3.81" y="0" drill="1.1"/>
+<wire x1="-10.16" y1="1.27" x2="10.16" y2="1.27" width="0.127" layer="21"/>
+<wire x1="10.16" y1="1.27" x2="10.16" y2="-1.27" width="0.127" layer="21"/>
+<wire x1="10.16" y1="-1.27" x2="-10.16" y2="-1.27" width="0.127" layer="21"/>
+<wire x1="-10.16" y1="-1.27" x2="-10.16" y2="1.27" width="0.127" layer="21"/>
+<text x="-10.16" y="-2.54" size="0.8" layer="21" font="vector" ratio="15">&gt;NAME</text>
+<pad name="4" x="-1.27" y="0" drill="1.1"/>
+<pad name="5" x="1.27" y="0" drill="1.1"/>
+<pad name="6" x="3.81" y="0" drill="1.1"/>
+<pad name="7" x="6.35" y="0" drill="1.1"/>
+<pad name="8" x="8.89" y="0" drill="1.1"/>
 </package>
 <package name="1X4_2.54">
-<pad name="1" x="-2.54" y="0" drill="1.1" shape="square"/>
-<pad name="2" x="0" y="0" drill="1.1"/>
-<pad name="3" x="2.54" y="0" drill="1.1"/>
-<wire x1="-3.81" y1="1.27" x2="6.35" y2="1.27" width="0.127" layer="21"/>
-<wire x1="6.35" y1="1.27" x2="6.35" y2="-1.27" width="0.127" layer="21"/>
-<wire x1="6.35" y1="-1.27" x2="-3.81" y2="-1.27" width="0.127" layer="21"/>
-<wire x1="-3.81" y1="-1.27" x2="-3.81" y2="1.27" width="0.127" layer="21"/>
-<text x="-3.81" y="-2.54" size="0.8" layer="21" font="vector" ratio="15">&gt;NAME</text>
-<pad name="4" x="5.08" y="0" drill="1.1"/>
+<pad name="1" x="-3.81" y="0" drill="1.1" shape="square"/>
+<pad name="2" x="-1.27" y="0" drill="1.1"/>
+<pad name="3" x="1.27" y="0" drill="1.1"/>
+<wire x1="-5.08" y1="1.27" x2="5.08" y2="1.27" width="0.127" layer="21"/>
+<wire x1="5.08" y1="1.27" x2="5.08" y2="-1.27" width="0.127" layer="21"/>
+<wire x1="5.08" y1="-1.27" x2="-5.08" y2="-1.27" width="0.127" layer="21"/>
+<wire x1="-5.08" y1="-1.27" x2="-5.08" y2="1.27" width="0.127" layer="21"/>
+<text x="-5.08" y="-2.54" size="0.8" layer="25" font="vector" ratio="15">&gt;NAME</text>
+<pad name="4" x="3.81" y="0" drill="1.1"/>
+</package>
+<package name="2X10_2.54">
+<pad name="1" x="-11.43" y="-1.27" drill="1.1" shape="square"/>
+<pad name="2" x="-11.43" y="1.27" drill="1.1"/>
+<pad name="3" x="-8.89" y="-1.27" drill="1.1"/>
+<pad name="4" x="-8.89" y="1.27" drill="1.1"/>
+<pad name="5" x="-6.35" y="-1.27" drill="1.1"/>
+<pad name="6" x="-6.35" y="1.27" drill="1.1"/>
+<pad name="7" x="-3.81" y="-1.27" drill="1.1"/>
+<pad name="8" x="-3.81" y="1.27" drill="1.1"/>
+<pad name="9" x="-1.27" y="-1.27" drill="1.1"/>
+<pad name="10" x="-1.27" y="1.27" drill="1.1"/>
+<pad name="11" x="1.27" y="-1.27" drill="1.1"/>
+<pad name="12" x="1.27" y="1.27" drill="1.1"/>
+<pad name="13" x="3.81" y="-1.27" drill="1.1"/>
+<pad name="14" x="3.81" y="1.27" drill="1.1"/>
+<polygon width="0" layer="21">
+<vertex x="-11.43" y="-2.54"/>
+<vertex x="-11.938" y="-3.556"/>
+<vertex x="-10.922" y="-3.556"/>
+</polygon>
+<text x="7.62" y="-3.81" size="0.8" layer="21" font="vector" ratio="15">&gt;NAME</text>
+<pad name="15" x="6.35" y="-1.27" drill="1.1"/>
+<pad name="16" x="6.35" y="1.27" drill="1.1"/>
+<pad name="17" x="8.89" y="-1.27" drill="1.1"/>
+<pad name="18" x="8.89" y="1.27" drill="1.1"/>
+<pad name="19" x="11.43" y="-1.27" drill="1.1"/>
+<pad name="20" x="11.43" y="1.27" drill="1.1"/>
+<wire x1="-12.7" y1="2.54" x2="-12.7" y2="-2.54" width="0.127" layer="21"/>
+<wire x1="-12.7" y1="-2.54" x2="12.7" y2="-2.54" width="0.127" layer="21"/>
+<wire x1="12.7" y1="-2.54" x2="12.7" y2="2.54" width="0.127" layer="21"/>
+<wire x1="12.7" y1="2.54" x2="-12.7" y2="2.54" width="0.127" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -544,6 +576,59 @@
 <connect gate="-2" pin="S" pad="2"/>
 <connect gate="-3" pin="S" pad="3"/>
 <connect gate="-4" pin="S" pad="4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="20" prefix="J">
+<gates>
+<gate name=".1" symbol="K" x="-5.08" y="25.4"/>
+<gate name=".2" symbol="K" x="-5.08" y="22.86"/>
+<gate name=".3" symbol="K" x="-5.08" y="20.32"/>
+<gate name=".4" symbol="K" x="-5.08" y="17.78"/>
+<gate name=".5" symbol="K" x="-5.08" y="15.24"/>
+<gate name=".6" symbol="K" x="-5.08" y="12.7"/>
+<gate name=".7" symbol="K" x="-5.08" y="10.16"/>
+<gate name=".8" symbol="K" x="-5.08" y="7.62"/>
+<gate name=".9" symbol="K" x="-5.08" y="5.08"/>
+<gate name=".10" symbol="K" x="-5.08" y="2.54"/>
+<gate name=".11" symbol="K" x="-5.08" y="0"/>
+<gate name=".12" symbol="K" x="-5.08" y="-2.54"/>
+<gate name=".13" symbol="K" x="-5.08" y="-5.08"/>
+<gate name=".14" symbol="K" x="-5.08" y="-7.62"/>
+<gate name=".15" symbol="K" x="-5.08" y="-10.16"/>
+<gate name=".16" symbol="K" x="-5.08" y="-12.7"/>
+<gate name=".17" symbol="K" x="-5.08" y="-15.24"/>
+<gate name=".18" symbol="K" x="-5.08" y="-17.78"/>
+<gate name=".19" symbol="K" x="-5.08" y="-20.32"/>
+<gate name=".20" symbol="K" x="-5.08" y="-22.86"/>
+</gates>
+<devices>
+<device name="" package="2X10_2.54">
+<connects>
+<connect gate=".1" pin="S" pad="1"/>
+<connect gate=".10" pin="S" pad="10"/>
+<connect gate=".11" pin="S" pad="11"/>
+<connect gate=".12" pin="S" pad="12"/>
+<connect gate=".13" pin="S" pad="13"/>
+<connect gate=".14" pin="S" pad="14"/>
+<connect gate=".15" pin="S" pad="15"/>
+<connect gate=".16" pin="S" pad="16"/>
+<connect gate=".17" pin="S" pad="17"/>
+<connect gate=".18" pin="S" pad="18"/>
+<connect gate=".19" pin="S" pad="19"/>
+<connect gate=".2" pin="S" pad="2"/>
+<connect gate=".20" pin="S" pad="20"/>
+<connect gate=".3" pin="S" pad="3"/>
+<connect gate=".4" pin="S" pad="4"/>
+<connect gate=".5" pin="S" pad="5"/>
+<connect gate=".6" pin="S" pad="6"/>
+<connect gate=".7" pin="S" pad="7"/>
+<connect gate=".8" pin="S" pad="8"/>
+<connect gate=".9" pin="S" pad="9"/>
 </connects>
 <technologies>
 <technology name=""/>
